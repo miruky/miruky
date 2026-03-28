@@ -18,26 +18,17 @@ AWS を中心としたクラウドインフラ・サーバーレス・IaC につ
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
 ![Amazon S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
 ![Amazon DynamoDB](https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
+![Amazon ECS](https://img.shields.io/badge/Amazon_ECS-FF9900?style=flat-square&logo=amazonecs&logoColor=white)
+![Amazon SQS](https://img.shields.io/badge/Amazon_SQS-FF4F8B?style=flat-square&logo=amazonsqs&logoColor=white)
+![Amazon RDS](https://img.shields.io/badge/Amazon_RDS-527FFF?style=flat-square&logo=amazonrds&logoColor=white)
+![Amazon CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat-square&logo=amazoncloudwatch&logoColor=white)
 
 **IaC**
 
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![CloudFormation](https://img.shields.io/badge/CloudFormation-FF4F8B?style=flat-square&logo=amazonwebservices&logoColor=white)
-![AWS CDK](https://img.shields.io/badge/AWS_CDK-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
-![AWS SAM](https://img.shields.io/badge/AWS_SAM-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
-
-**AI / ML**
-
-![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Amazon SageMaker](https://img.shields.io/badge/Amazon_SageMaker-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Amazon Comprehend](https://img.shields.io/badge/Amazon_Comprehend-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Amazon Lex](https://img.shields.io/badge/Amazon_Lex-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 
 **CI/CD**
 
-![CodePipeline](https://img.shields.io/badge/CodePipeline-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
-![CodeBuild](https://img.shields.io/badge/CodeBuild-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
-![CodeDeploy](https://img.shields.io/badge/CodeDeploy-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 
 **Languages**
