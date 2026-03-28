@@ -1,16 +1,18 @@
-## Hi there 👋
+## Hi, I'm miruky
 
-<!--
-**miruky/miruky** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+AWS を中心としたクラウドインフラ・サーバーレス・IaC について、Qiita で技術記事を連載しています。
 
-Here are some ideas to get you started:
+### Tech Stack
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**Cloud / IaC**&emsp; AWS | Terraform | CloudFormation | CDK | SAM
+
+**AI / ML**&emsp; Amazon Bedrock | SageMaker | Comprehend | Lex
+
+**CI/CD**&emsp; CodePipeline | CodeBuild | CodeDeploy | GitHub Actions
+
+**Languages**&emsp; Python (Boto3) | TypeScript | HCL
+
+### Links
+
+- [Qiita (@miruky)](https://qiita.com/miruky) — 10 シリーズ / 70+ 記事
+- [miruky/qiita](https://github.com/miruky/qiita) — 連載記事のサンプルコード集
