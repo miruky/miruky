@@ -1,12 +1,13 @@
-<div align="center">
+# Hi, I'm miruky
 
-[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)&ensp;[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
+<div align="start">
+
+[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)&ensp;
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
 
 </div>
-
-## Hi, I'm miruky
-
-AWS を中心としたクラウドインフラ・サーバーレス・IaC について、Qiita で技術記事を連載しています。
+普段はAWSを使用したクラウドインフラの設計・構築〜運用・保守の業務を行っています。<br>
+また、QiitaにてAWS・AIを中心とした技術記事を投稿しています。
 
 ### Tech Stack
 
