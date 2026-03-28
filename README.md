@@ -21,24 +21,27 @@ AWS を中心としたクラウドインフラ・サーバーレス・IaC につ
 ![Amazon SQS](https://img.shields.io/badge/Amazon_SQS-FF4F8B?style=flat-square&logoColor=white)
 ![Amazon RDS](https://img.shields.io/badge/Amazon_RDS-527FFF?style=flat-square&logoColor=white)
 ![Amazon CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat-square&logoColor=white)
-![AWS CloudFormation](https://img.shields.io/badge/CloudFormation-FF4F8B?style=flat-square&logoColor=white)
-![AWS CDK](https://img.shields.io/badge/AWS_CDK-232F3E?style=flat-square&logoColor=white)
-![AWS SAM](https://img.shields.io/badge/AWS_SAM-232F3E?style=flat-square&logoColor=white)
-![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logoColor=white)
-![Amazon SageMaker](https://img.shields.io/badge/SageMaker-232F3E?style=flat-square&logoColor=white)
-![Amazon Comprehend](https://img.shields.io/badge/Comprehend-232F3E?style=flat-square&logoColor=white)
-![Amazon Lex](https://img.shields.io/badge/Amazon_Lex-232F3E?style=flat-square&logoColor=white)
-![AWS CodePipeline](https://img.shields.io/badge/CodePipeline-232F3E?style=flat-square&logoColor=white)
-![AWS CodeBuild](https://img.shields.io/badge/CodeBuild-232F3E?style=flat-square&logoColor=white)
-![AWS CodeDeploy](https://img.shields.io/badge/CodeDeploy-232F3E?style=flat-square&logoColor=white)
 
 **IaC**
 
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
+![AWS CloudFormation](https://img.shields.io/badge/CloudFormation-FF4F8B?style=flat-square&logoColor=white)
+![AWS CDK](https://img.shields.io/badge/AWS_CDK-232F3E?style=flat-square&logoColor=white)
+![AWS SAM](https://img.shields.io/badge/AWS_SAM-232F3E?style=flat-square&logoColor=white)
+
+**ML/AI**
+
+![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logoColor=white)
+![Amazon SageMaker](https://img.shields.io/badge/SageMaker-232F3E?style=flat-square&logoColor=white)
+![Amazon Comprehend](https://img.shields.io/badge/Comprehend-232F3E?style=flat-square&logoColor=white)
+![Amazon Lex](https://img.shields.io/badge/Amazon_Lex-232F3E?style=flat-square&logoColor=white)
 
 **CI/CD**
 
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![AWS CodePipeline](https://img.shields.io/badge/CodePipeline-232F3E?style=flat-square&logoColor=white)
+![AWS CodeBuild](https://img.shields.io/badge/CodeBuild-232F3E?style=flat-square&logoColor=white)
+![AWS CodeDeploy](https://img.shields.io/badge/CodeDeploy-232F3E?style=flat-square&logoColor=white)
 
 **Languages**
 
