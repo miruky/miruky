@@ -1,7 +1,6 @@
 <div align="center">
 
-[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
+[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)&ensp;[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
 
 </div>
 
@@ -13,15 +12,25 @@ AWS を中心としたクラウドインフラ・サーバーレス・IaC につ
 
 **Cloud**
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Amazon EC2](https://img.shields.io/badge/Amazon_EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white)
-![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
-![Amazon S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white)
-![Amazon DynamoDB](https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white)
-![Amazon ECS](https://img.shields.io/badge/Amazon_ECS-FF9900?style=flat-square&logo=amazonecs&logoColor=white)
-![Amazon SQS](https://img.shields.io/badge/Amazon_SQS-FF4F8B?style=flat-square&logo=amazonsqs&logoColor=white)
-![Amazon RDS](https://img.shields.io/badge/Amazon_RDS-527FFF?style=flat-square&logo=amazonrds&logoColor=white)
-![Amazon CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat-square&logo=amazoncloudwatch&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logoColor=white)
+![Amazon EC2](https://img.shields.io/badge/Amazon_EC2-FF9900?style=flat-square&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logoColor=white)
+![Amazon S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logoColor=white)
+![Amazon DynamoDB](https://img.shields.io/badge/Amazon_DynamoDB-4053D6?style=flat-square&logoColor=white)
+![Amazon ECS](https://img.shields.io/badge/Amazon_ECS-FF9900?style=flat-square&logoColor=white)
+![Amazon SQS](https://img.shields.io/badge/Amazon_SQS-FF4F8B?style=flat-square&logoColor=white)
+![Amazon RDS](https://img.shields.io/badge/Amazon_RDS-527FFF?style=flat-square&logoColor=white)
+![Amazon CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat-square&logoColor=white)
+![AWS CloudFormation](https://img.shields.io/badge/CloudFormation-FF4F8B?style=flat-square&logoColor=white)
+![AWS CDK](https://img.shields.io/badge/AWS_CDK-232F3E?style=flat-square&logoColor=white)
+![AWS SAM](https://img.shields.io/badge/AWS_SAM-232F3E?style=flat-square&logoColor=white)
+![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logoColor=white)
+![Amazon SageMaker](https://img.shields.io/badge/SageMaker-232F3E?style=flat-square&logoColor=white)
+![Amazon Comprehend](https://img.shields.io/badge/Comprehend-232F3E?style=flat-square&logoColor=white)
+![Amazon Lex](https://img.shields.io/badge/Amazon_Lex-232F3E?style=flat-square&logoColor=white)
+![AWS CodePipeline](https://img.shields.io/badge/CodePipeline-232F3E?style=flat-square&logoColor=white)
+![AWS CodeBuild](https://img.shields.io/badge/CodeBuild-232F3E?style=flat-square&logoColor=white)
+![AWS CodeDeploy](https://img.shields.io/badge/CodeDeploy-232F3E?style=flat-square&logoColor=white)
 
 **IaC**
 
