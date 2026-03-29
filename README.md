@@ -2,8 +2,10 @@
 
 <div align="start">
 
-[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)&ensp;
+[![Blog](https://img.shields.io/badge/mirukyのIT備忘録-111640?style=for-the-badge&logo=googlechrome&logoColor=white)](https://miruky.github.io)&ensp;&ensp;
+[![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)&ensp;&ensp;
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
+
 
 </div>
 普段はAWSを使用したクラウドインフラの設計・構築〜運用・保守の業務を行っています。<br>
@@ -59,5 +61,5 @@
 [![Sample Code](https://img.shields.io/badge/Sample_Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/miruky/qiita)
 &ensp;連載記事のサンプルコード集
 
-[![Blog](https://img.shields.io/badge/Blog-mirukyのIT備忘録-00d4ff?style=flat-square&logo=googlechrome&logoColor=white)](https://miruky.github.io)
+[![Blog](https://img.shields.io/badge/Blog-mirukyのIT備忘録-111640?style=flat-square&logo=googlechrome&logoColor=white)](https://miruky.github.io)
 &ensp;ポートフォリオ・技術ブログサイト
