@@ -4,7 +4,7 @@
 
 [![Blog](https://img.shields.io/badge/mirukyのIT備忘録（ブログ）-6F51A1?style=for-the-badge&logo=googlechrome&logoColor=white)](https://miruky.github.io)&ensp;&ensp;
 [![Qiita](https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white)](https://qiita.com/miruky)&ensp;&ensp;
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
+[![X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/miruky_tech)
 
 
 </div>
