@@ -13,7 +13,7 @@
 
 **Cloud**
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logoColor=white)
+![Amazon Web Services](https://img.shields.io/badge/Amazon_Web_Services（AWS）-232F3E?style=flat-square&logoColor=white)<br>
 ![Amazon EC2](https://img.shields.io/badge/Amazon_EC2-FF9900?style=flat-square&logoColor=white)
 ![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logoColor=white)
 ![Amazon S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logoColor=white)
