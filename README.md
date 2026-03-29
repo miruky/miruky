@@ -32,17 +32,18 @@
 
 **ML/AI**
 
-![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logoColor=white)
-![Amazon SageMaker](https://img.shields.io/badge/SageMaker-232F3E?style=flat-square&logoColor=white)
-![Amazon Comprehend](https://img.shields.io/badge/Comprehend-232F3E?style=flat-square&logoColor=white)
+![Amazon Connect](https://img.shields.io/badge/Amazon_Connect-4053D6?style=flat-square&logoColor=white)
+![Amazon Bedrock](https://img.shields.io/badge/Amazon_Bedrock-09BD33?style=flat-square&logoColor=white)
+![Amazon SageMaker](https://img.shields.io/badge/Amazon_SageMaker-232F3E?style=flat-square&logoColor=white)
+![Amazon Comprehend](https://img.shields.io/badge/Amazon_Comprehend-232F3E?style=flat-square&logoColor=white)
 ![Amazon Lex](https://img.shields.io/badge/Amazon_Lex-232F3E?style=flat-square&logoColor=white)
 
 **CI/CD**
 
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![AWS CodePipeline](https://img.shields.io/badge/CodePipeline-232F3E?style=flat-square&logoColor=white)
-![AWS CodeBuild](https://img.shields.io/badge/CodeBuild-232F3E?style=flat-square&logoColor=white)
-![AWS CodeDeploy](https://img.shields.io/badge/CodeDeploy-232F3E?style=flat-square&logoColor=white)
+![AWS CodePipeline](https://img.shields.io/badge/AWS_CodePipeline-232F3E?style=flat-square&logoColor=white)
+![AWS CodeBuild](https://img.shields.io/badge/AWS_CodeBuild-232F3E?style=flat-square&logoColor=white)
+![AWS CodeDeploy](https://img.shields.io/badge/AWS_CodeDeploy-232F3E?style=flat-square&logoColor=white)
 
 **Languages**
 
