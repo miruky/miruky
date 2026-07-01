@@ -19,11 +19,11 @@
 
 | | |
 | :-- | :-- |
-| **Cloud** | AWS を用いたクラウドインフラの設計・構築 〜 運用・保守 |
-| **Writing** | Qiita で AWS・AI・セキュリティ を中心に技術記事を連載 |
-| **Focus** | Terraform &#215; Amazon Bedrock による生成 AI 基盤づくり |
-| **Certs** | AWS 全冠 / IPA AP・NW・SC / LPIC-3 |
-| **Based** | Tokyo, Japan |
+| **業務** | AWS を用いたクラウドインフラの設計・構築 〜 運用・保守 |
+| **発信** | Qiita で AWS・AI・セキュリティ を中心に技術記事を連載 |
+| **関心** | Terraform &#215; Amazon Bedrock による生成 AI 基盤づくり |
+| **資格** | AWS 全冠 / IPA AP・NW・SC / LPIC-3 |
+| **拠点** | 東京（Tokyo） |
 
 <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-qiita.svg" alt="Qiita" />
 
@@ -81,10 +81,10 @@
 
 <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-links.svg" alt="Links" />
 
-- **[Qiita](https://qiita.com/miruky)** &#8212; AWS・AI・セキュリティ の技術記事（10 シリーズ連載中）
-- **[Sample Code](https://github.com/miruky/qiita)** &#8212; 連載記事のサンプルコード集
-- **[Blog](https://miruky.github.io)** &#8212; ポートフォリオ・技術ブログサイト
-- **[Qiita Contribution Tracker](https://github.com/miruky/qiita-contibution-count)** &#8212; 自作のコントリビューション可視化ツール
+- **[Qiita](https://qiita.com/miruky)** &#8212; AWS・AI・セキュリティ の技術記事（全 10 シリーズ連載）
+- **[サンプルコード](https://github.com/miruky/qiita)** &#8212; 連載記事のサンプルコード集
+- **[ブログ](https://miruky.github.io)** &#8212; ポートフォリオ・技術ブログサイト
+- **[Qiita 集計ツール](https://github.com/miruky/qiita-contibution-count)** &#8212; 自作のコントリビューション可視化ツール
 
 <br/>
 
