@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 380" width="840" height="380" role="img" aria-label="Qiita stats">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1826"/><stop offset="1" stop-color="#0A0E14"/>
+    </linearGradient>
+    <linearGradient id="num" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A8ECFF"/><stop offset="1" stop-color="#5CD1F0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CD1F0" stop-opacity="0.55"/><stop offset="0.5" stop-color="#5CD1F0" stop-opacity="0.12"/><stop offset="1" stop-color="#3AA0E0" stop-opacity="0.45"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#5CD1F0" stop-opacity="0.16"/><stop offset="1" stop-color="#5CD1F0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5CD1F0" stop-opacity="0.35"/><stop offset="1" stop-color="#5CD1F0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A8ECFF" stop-opacity="0"/><stop offset="0.5" stop-color="#A8ECFF" stop-opacity="0.14"/><stop offset="1" stop-color="#A8ECFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="round"><rect x="2" y="2" width="836" height="376" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect x="2" y="2" width="836" height="376" fill="url(#panel)"/>
+    <rect x="2" y="2" width="836" height="376" fill="url(#glow)"/>
+    <rect x="2" y="2" width="836" height="140" fill="url(#glass)"/>
+    <!-- glassy sweep -->
+    <rect x="-360" y="2" width="360" height="376" fill="url(#sweep)">
+      <animate attributeName="x" values="-360;840" dur="6s" begin="0s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+    </rect>
+  </g>
+
+  <!-- header -->
+  <circle cx="34" cy="40" r="5" fill="#5CD1F0">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="5;6.5;5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="50" y="45" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="14" letter-spacing="5" fill="#A8ECFF">QIITA</text>
+  <text x="806" y="45" text-anchor="end" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="13" fill="#84A7BA">@miruky &#183; updated daily</text>
+
+  <text x="173" y="152" text-anchor="middle" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="url(#num)">80</text><text x="173" y="176" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="3" fill="#84A7BA">ARTICLES</text><text x="420" y="152" text-anchor="middle" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="url(#num)">1,252</text><text x="420" y="176" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="3" fill="#84A7BA">FOLLOWERS</text><text x="667" y="152" text-anchor="middle" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="url(#num)">6,810</text><text x="667" y="176" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="3" fill="#84A7BA">CONTRIBUTION</text><text x="173" y="232" text-anchor="middle" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="url(#num)">4,464</text><text x="173" y="256" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="3" fill="#84A7BA">LIKES</text><text x="420" y="232" text-anchor="middle" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="url(#num)">4,531</text><text x="420" y="256" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="3" fill="#84A7BA">STOCKS</text><text x="667" y="232" text-anchor="middle" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="42" font-weight="800" fill="url(#num)">1.8M</text><text x="667" y="256" text-anchor="middle" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" letter-spacing="3" fill="#84A7BA">VIEWS</text>
+
+  <!-- sparkline -->
+  <text x="44" y="300" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" letter-spacing="2" fill="#84A7BA">CONTRIBUTION HISTORY</text>
+  <path d="M44 360 L44.0 360.0 L53.1 359.7 L62.1 359.4 L71.2 359.1 L80.2 358.8 L89.3 358.5 L98.4 358.2 L107.4 357.5 L116.5 356.7 L125.5 355.4 L134.6 354.4 L143.7 353.3 L152.7 352.7 L161.8 351.1 L170.8 350.0 L179.9 349.2 L189.0 349.1 L198.0 348.9 L207.1 348.3 L216.1 347.6 L225.2 346.2 L234.3 345.0 L243.3 344.7 L252.4 344.5 L261.4 344.3 L270.5 344.1 L279.6 343.8 L288.6 343.0 L297.7 341.1 L306.7 339.8 L315.8 339.6 L324.9 339.4 L333.9 338.8 L343.0 337.7 L352.0 335.4 L361.1 334.4 L370.2 334.3 L379.2 334.1 L388.3 333.8 L397.3 333.6 L406.4 333.1 L415.5 331.8 L424.5 331.4 L433.6 331.0 L442.7 330.6 L451.7 330.4 L460.8 330.2 L469.8 329.9 L478.9 329.3 L488.0 329.0 L497.0 328.8 L506.1 328.6 L515.1 328.5 L524.2 328.3 L533.3 328.0 L542.3 327.7 L551.4 327.5 L560.4 327.3 L569.5 327.2 L578.6 327.0 L587.6 326.9 L596.7 326.7 L605.7 326.3 L614.8 325.2 L623.9 324.4 L632.9 324.1 L642.0 323.7 L651.0 323.2 L660.1 322.8 L669.2 321.5 L678.2 319.7 L687.3 318.4 L696.3 318.2 L705.4 317.9 L714.5 317.4 L723.5 316.9 L732.6 315.3 L741.6 314.9 L750.7 314.7 L759.8 314.5 L768.8 314.1 L777.9 313.1 L786.9 312.6 L796.0 312.0 L796 360 Z" fill="url(#spark)"/>
+  <path d="M44.0 360.0 L53.1 359.7 L62.1 359.4 L71.2 359.1 L80.2 358.8 L89.3 358.5 L98.4 358.2 L107.4 357.5 L116.5 356.7 L125.5 355.4 L134.6 354.4 L143.7 353.3 L152.7 352.7 L161.8 351.1 L170.8 350.0 L179.9 349.2 L189.0 349.1 L198.0 348.9 L207.1 348.3 L216.1 347.6 L225.2 346.2 L234.3 345.0 L243.3 344.7 L252.4 344.5 L261.4 344.3 L270.5 344.1 L279.6 343.8 L288.6 343.0 L297.7 341.1 L306.7 339.8 L315.8 339.6 L324.9 339.4 L333.9 338.8 L343.0 337.7 L352.0 335.4 L361.1 334.4 L370.2 334.3 L379.2 334.1 L388.3 333.8 L397.3 333.6 L406.4 333.1 L415.5 331.8 L424.5 331.4 L433.6 331.0 L442.7 330.6 L451.7 330.4 L460.8 330.2 L469.8 329.9 L478.9 329.3 L488.0 329.0 L497.0 328.8 L506.1 328.6 L515.1 328.5 L524.2 328.3 L533.3 328.0 L542.3 327.7 L551.4 327.5 L560.4 327.3 L569.5 327.2 L578.6 327.0 L587.6 326.9 L596.7 326.7 L605.7 326.3 L614.8 325.2 L623.9 324.4 L632.9 324.1 L642.0 323.7 L651.0 323.2 L660.1 322.8 L669.2 321.5 L678.2 319.7 L687.3 318.4 L696.3 318.2 L705.4 317.9 L714.5 317.4 L723.5 316.9 L732.6 315.3 L741.6 314.9 L750.7 314.7 L759.8 314.5 L768.8 314.1 L777.9 313.1 L786.9 312.6 L796.0 312.0" fill="none" stroke="url(#num)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+        stroke-dasharray="2600" stroke-dashoffset="0">
+    <animate attributeName="stroke-dashoffset" values="2600;0" dur="1.8s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1"/>
+  </path>
+  <circle cx="796.0" cy="312.0" r="3.5" fill="#A8ECFF">
+    <animate attributeName="r" values="3.5;6;3.5" dur="2.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- glass border on top -->
+  <rect x="2" y="2" width="836" height="376" rx="20" fill="none" stroke="url(#border)" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,40 @@
+name: Update Qiita Card
+
+# 自作の Qiita 統計カード(assets/qiita-card.svg)を history.json から毎日レンダーして更新する。
+on:
+  schedule:
+    # 集計パイプライン(qiita-contibution-count)が ~14:40 UTC に更新するので、その後に実行
+    - cron: "20 15 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/render_qiita_card.py"
+      - ".github/workflows/qiita-card.yml"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render Qiita card
+        run: python scripts/render_qiita_card.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- assets/qiita-card.svg; then
+            git add assets/qiita-card.svg
+            git commit -m "chore: update Qiita stats card [skip ci]"
+            git push
+          else
+            echo "no change in card"
+          fi
