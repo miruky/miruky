@@ -7,11 +7,12 @@
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1200&color=5CD1F0&center=true&vCenter=true&width=560&height=40&lines=AWS+Cloud+Engineer;Qiita+Writer+%2F+80%2B+Articles;AWS+All+Certifications;Infrastructure+as+Code+%2F+Serverless+%2F+GenAI" alt="roles" />
 
 <p>
-  <a href="https://miruky.github.io"><img src="https://img.shields.io/badge/mirukyのIT備忘録（ブログ）-6F51A1?style=flat-square&logo=googlechrome&logoColor=white" alt="Blog" /></a>
   <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white" alt="Qiita" /></a>
   <a href="https://x.com/miruky_tech"><img src="https://img.shields.io/badge/@miruky__tech-1A1E24?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
   <img src="https://komarev.com/ghpvc/?username=miruky&label=views&color=30363D&style=flat-square" alt="views" />
 </p>
+
+<a href="https://miruky.github.io"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/blog-badge.svg" width="300" alt="mirukyのIT備忘録 (Blog)" /></a>
 
 </div>
 
