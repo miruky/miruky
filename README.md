@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1200&color=5CD1F0&center=true&vCenter=true&width=560&height=40&lines=AWS+Cloud+Engineer;Qiita+Writer+%2F+80%2B+Articles;13x+AWS+Certified;Infrastructure+as+Code+%2F+Serverless+%2F+GenAI" alt="roles" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1200&color=5CD1F0&center=true&vCenter=true&width=560&height=40&lines=AWS+Cloud+Engineer;Qiita+Writer+%2F+80%2B+Articles;AWS+All+Certifications;Infrastructure+as+Code+%2F+Serverless+%2F+GenAI" alt="roles" />
 
 <p>
   <a href="https://miruky.github.io"><img src="https://img.shields.io/badge/mirukyのIT備忘録（ブログ）-6F51A1?style=flat-square&logo=googlechrome&logoColor=white" alt="Blog" /></a>
@@ -39,8 +39,8 @@
 
 ![AWS](https://img.shields.io/badge/AWS-全冠-5CD1F0?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![応用情報](https://img.shields.io/badge/IPA-応用情報技術者_(AP)-30363D?style=flat-square)
-![ネットワークスペシャリスト](https://img.shields.io/badge/IPA-ネットワークSP_(NW)-30363D?style=flat-square)
-![情報処理安全確保支援士](https://img.shields.io/badge/IPA-登録セキスペ_(SC)-30363D?style=flat-square)
+![ネットワークスペシャリスト](https://img.shields.io/badge/IPA-ネットワークスペシャリスト_(NW)-30363D?style=flat-square)
+![セキュリティスペシャリスト](https://img.shields.io/badge/IPA-セキュリティスペシャリスト_(SC)-30363D?style=flat-square)
 ![LPIC-3](https://img.shields.io/badge/LPIC-Level_3-E00034?style=flat-square&logo=linux&logoColor=white)
 
 </div>
