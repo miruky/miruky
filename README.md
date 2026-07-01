@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="miruky" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/header.svg" width="100%" alt="miruky" />
 
 <br/>
 
@@ -15,7 +15,7 @@
 
 </div>
 
-<img src="./assets/section-about.svg" alt="About" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-about.svg" alt="About" />
 
 | | |
 | :-- | :-- |
@@ -25,7 +25,7 @@
 | **Certs** | AWS 全冠 / IPA AP・NW・SC / LPIC-3 |
 | **Based** | Tokyo, Japan |
 
-<img src="./assets/section-qiita.svg" alt="Qiita" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-qiita.svg" alt="Qiita" />
 
 <div align="center">
 
@@ -41,7 +41,7 @@
 
 <sub>Qiita API と自作の集計パイプライン（history.json）から毎日自動更新</sub>
 
-<img src="./assets/section-certifications.svg" alt="Certifications" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-certifications.svg" alt="Certifications" />
 
 <div align="center">
 
@@ -53,7 +53,7 @@
 
 </div>
 
-<img src="./assets/section-stack.svg" alt="Tech Stack" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-stack.svg" alt="Tech Stack" />
 
 <div align="center">
 
@@ -71,7 +71,7 @@
 | **CI / CD** | ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![AWS CodePipeline](https://img.shields.io/badge/AWS_CodePipeline-232F3E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0zMCwzMSBMMzUsMzEgTDM1LDI5IEwzMCwyOSBMMzAsMzEgWk0zNyw2MSBMMzUsNjAgTDQyLDQyIEw0NCw0MyBMMzcsNjEgWk00Niw1NiBMNTEsNTEgTDQ2LDQ2IEw0Nyw0NSBMNTMsNTAgQzUzLDUwIDU0LDUxIDU0LDUxIEM1NCw1MSA1Myw1MiA1Myw1MiBMNDcsNTcgTDQ2LDU2IFpNMjYsNTEgQzI2LDUxIDI2LDUwIDI2LDUwIEwzMiw0NSBMMzQsNDYgTDI4LDUxIEwzMyw1NiBMMzIsNTcgTDI2LDUyIEMyNiw1MiAyNiw1MSAyNiw1MSBMMjYsNTEgWk02MywzNSBMMTgsMzUgQzE3LDM1IDE1LDMzIDE1LDMyIEwxNSwzMSBMMjcsMzEgTDI3LDI5IEwxNSwyOSBMMTUsMTggQzE1LDE3IDE3LDE1IDE4LDE1IEw2MywxNSBDNjQsMTUgNjYsMTcgNjYsMTggTDY2LDI5IEwzOCwyOSBMMzgsMzEgTDY2LDMxIEw2NiwzMiBDNjYsMzMgNjQsMzUgNjMsMzUgTDYzLDM1IFpNMjIsNjYgTDU4LDY2IEw1OCwzNyBMMjIsMzcgTDIyLDY2IFpNNjMsMTMgTDE4LDEzIEMxNSwxMyAxMywxNSAxMywxOCBMMTMsMzIgQzEzLDM1IDE1LDM3IDE4LDM3IEwyMCwzNyBMMjAsNjcgQzIwLDY4IDIwLDY4IDIxLDY4IEw1OSw2OCBDNjAsNjggNjAsNjggNjAsNjcgTDYwLDM3IEw2MywzNyBDNjYsMzcgNjgsMzUgNjgsMzIgTDY4LDE4IEM2OCwxNSA2NiwxMyA2MywxMyBMNjMsMTMgWiIvPjwvc3ZnPg==&logoColor=white) ![AWS CodeBuild](https://img.shields.io/badge/AWS_CodeBuild-232F3E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik02NSwyMiBMNTksMTcgTDU0LDIyIEw2NSwyMiBaTTU3LDE2IEw0NSwxNiBMNTIsMjEgTDU3LDE2IFpNNTIsMzQgTDQyLDM3IEw2MSwzNyBMNTIsMzQgWk0zOCw1NyBMNjUsNTcgTDY1LDM5IEwzOCwzOSBMMzgsNTcgWk01MCwyMiBMNDMsMTcgTDM2LDIyIEw1MCwyMiBaTTM0LDIxIEw0MSwxNiBMMjgsMTYgTDM0LDIxIFpNMzIsMjIgTDI2LDE3IEwxOSwyMiBMMjksMjIgTDMyLDIyIFpNMjgsMjQgTDIwLDI0IEwyOCwzMiBMMjgsMjQgWk0yOCwzNSBMMTgsNDQgTDI4LDUzIEwyOCwzNSBaTTI4LDU2IEwxOCw2NiBMMTgsNjYgTDI4LDY2IEwyOCw1NiBaTTE4LDQ2IEwxOCw2MyBMMjcsNTUgTDE4LDQ2IFpNMTgsNDEgTDI3LDM0IEwxOCwyNSBMMTgsNDEgWk0xNywyMSBMMjMsMTYgTDE3LDE2IEwxNywyMSBaTTE1LDE0IEwxMywxNCBMMTMsMjQgTDE1LDI0IEwxNSwyMyBMMTUsMTUgTDE1LDE0IFpNNjksMjMgQzY5LDI0IDY4LDI0IDY4LDI0IEw1MywyNCBMNTMsMzIgTDY2LDM3IEw2NiwzNyBDNjYsMzcgNjcsMzggNjcsMzggTDY3LDU4IEM2Nyw1OSA2Niw1OSA2Niw1OSBMMzcsNTkgQzM2LDU5IDM2LDU5IDM2LDU4IEwzNiwzOCBDMzYsMzggMzYsMzcgMzYsMzcgTDM2LDM3IEw1MSwzMiBMNTEsMjQgTDMwLDI0IEwzMCw2NyBDMzAsNjggMjksNjggMjksNjggTDE3LDY4IEMxNiw2OCAxNiw2OCAxNiw2NyBMMTYsMjYgTDEyLDI2IEMxMSwyNiAxMSwyNiAxMSwyNSBMMTEsMTMgQzExLDEyIDExLDEyIDEyLDEyIEwxNiwxMiBDMTcsMTIgMTcsMTIgMTcsMTMgTDE3LDE0IEw2MCwxNCBMNjksMjIgQzY5LDIzIDY5LDIzIDY5LDIzIEw2OSwyMyBaTTQ4LDU1IEw1NCw0MiBMNTIsNDEgTDQ3LDU1IEw0OCw1NSBaTTU0LDUxIEw1NSw1MiBMNTksNDkgQzYwLDQ5IDYwLDQ4IDYwLDQ4IEM2MCw0OCA2MCw0NyA1OSw0NyBMNTYsNDQgTDU0LDQ1IEw1Nyw0OCBMNTQsNTEgWk00MSw0OCBDNDEsNDggNDEsNDcgNDEsNDcgQzQxLDQ3IDQxLDQ3IDQxLDQ2IEw0Niw0MyBMNDcsNDQgTDQzLDQ3IEw0Niw1MCBMNDUsNTIgTDQxLDQ4IFoiLz48L3N2Zz4=&logoColor=white) ![AWS CodeDeploy](https://img.shields.io/badge/AWS_CodeDeploy-232F3E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yOCw2NyBMNTQsNjcgTDU0LDUwIEwyOCw1MCBMMjgsNjcgWk01NSw0OCBMMjcsNDggQzI2LDQ4IDI2LDQ4IDI2LDQ5IEwyNiw2OCBDMjYsNjkgMjYsNjkgMjcsNjkgTDU1LDY5IEM1Niw2OSA1Niw2OSA1Niw2OCBMNTYsNDkgQzU2LDQ4IDU2LDQ4IDU1LDQ4IEw1NSw0OCBaTTM3LDY1IEw0Myw1MSBMNDUsNTIgTDM5LDY2IEwzNyw2NSBaTTQ5LDU5IEw0NSw1NSBMNDcsNTQgTDUxLDU4IEM1MSw1OCA1MSw1OCA1MSw1OSBDNTEsNTkgNTEsNTkgNTEsNTkgTDQ2LDYzIEw0NSw2MSBMNDksNTkgWk0zMSw1OCBDMzEsNTggMzEsNTggMzEsNTcgQzMxLDU3IDMxLDU3IDMxLDU3IEwzNiw1MyBMMzcsNTUgTDM0LDU4IEwzNyw2MSBMMzYsNjIgTDMxLDU4IFpNNjYsMzUgQzY0LDMzIDYyLDMyIDU5LDMyIEM1NSwzMiA1MiwzMyA1MSwzNiBDNTAsMjYgNDgsMTggNDUsMTQgQzU2LDE2IDY1LDI0IDY3LDM2IEM2NiwzNSA2NiwzNSA2NiwzNSBMNjYsMzUgWk00OCwzNSBMNDgsMzUgQzQ2LDMzIDQzLDMyIDQxLDMyIEMzNywzMiAzNCwzMyAzMiwzNSBDMzMsMjMgMzcsMTQgNDEsMTQgQzQxLDE0IDQxLDE0IDQxLDE0IEM0NCwxNCA0OCwyMyA0OSwzNiBDNDgsMzYgNDgsMzYgNDgsMzUgTDQ4LDM1IFpNMzAsMzYgQzMwLDM2IDMwLDM2IDMwLDM1IEwyOSwzNSBDMjcsMzMgMjUsMzIgMjIsMzIgQzE5LDMyIDE2LDMzIDE1LDM1IEMxNywyNCAyNSwxNiAzNiwxNCBDMzMsMTggMzEsMjYgMzAsMzYgTDMwLDM2IFpNNDEsMTIgQzI1LDEyIDEzLDI0IDEyLDQwIEMxMiw0MCAxMiw0MCAxMyw0MSBMMjMsNDcgTDI0LDQ2IEwxNCwzOSBDMTUsMzcgMTYsMzYgMTksMzUgQzIwLDM0IDIxLDM0IDIyLDM0IEMyNCwzNCAyNiwzNSAyOCwzNyBMMjgsMzcgQzMwLDM4IDMwLDQwIDMwLDQwIEMzMCw0MSAzMiw0NiAzMiw0NiBMMzQsNDUgTDMyLDQwIEwzMiw0MCBDMzMsMzYgMzcsMzQgNDEsMzQgQzQzLDM0IDQ1LDM1IDQ2LDM3IEM0NiwzNyA0OCwzOCA0OSw0MCBMNDksNDAgTDQ3LDQ1IEw0OSw0NiBMNTEsNDEgQzUxLDQxIDUxLDQxIDUxLDQwIEM1MSwzNyA1NCwzNCA1OSwzNCBDNjEsMzQgNjMsMzUgNjUsMzcgQzY2LDM4IDY3LDM5IDY3LDM5IEw1OCw0NSBMNTksNDcgTDY5LDQxIEM2OSw0MSA2OSw0MCA2OSw0MCBDNjksMjQgNTYsMTIgNDEsMTIgWiIvPjwvc3ZnPg==&logoColor=white) |
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-7B42BC?style=flat-square&logo=terraform&logoColor=white) |
 
-<img src="./assets/section-github.svg" alt="GitHub" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-github.svg" alt="GitHub" />
 
 <div align="center">
 
@@ -87,7 +87,7 @@
 
 </div>
 
-<img src="./assets/section-links.svg" alt="Links" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-links.svg" alt="Links" />
 
 - **[Qiita](https://qiita.com/miruky)** &#8212; AWS・AI・セキュリティ の技術記事（10 シリーズ連載中）
 - **[Sample Code](https://github.com/miruky/qiita)** &#8212; 連載記事のサンプルコード集
@@ -96,6 +96,6 @@
 
 <br/>
 
-<img src="./assets/divider.svg" width="100%" alt="" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/divider.svg" width="100%" alt="" />
 
 <div align="center"><sub>AWS Cloud Engineer based in Tokyo</sub></div>
