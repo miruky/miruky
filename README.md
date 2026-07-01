@@ -1,63 +1,59 @@
-<!-- ═══════════════════════════════  HEADER  ═══════════════════════════════ -->
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF9900,100:FFCE85&height=200&section=header&text=Hi,%20I'm%20miruky&fontSize=48&fontColor=FFFFFF&fontAlignY=38&desc=AWS%20Cloud%20Engineer%20%C2%B7%20Qiita%20Writer&descAlignY=60&descSize=18&animation=fadeIn" alt="header" />
+<img src="./assets/header.svg" width="100%" alt="miruky" />
 
-<a href="https://qiita.com/miruky">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=FF9900&center=true&vCenter=true&width=650&height=45&lines=AWS+Cloud+Engineer+%E2%98%81%EF%B8%8F;Qiita+Writer+%7C+80%2B+Articles+%E2%9C%8D%EF%B8%8F;13x+AWS+Certified+%F0%9F%8F%86;Infra+as+Code+%7C+Serverless+%7C+GenAI" alt="typing" />
-</a>
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1200&color=FF9900&center=true&vCenter=true&width=560&height=40&lines=AWS+Cloud+Engineer;Qiita+Writer+%2F+80%2B+Articles;13x+AWS+Certified;Infrastructure+as+Code+%2F+Serverless+%2F+GenAI" alt="roles" />
 
 <p>
-  <a href="https://miruky.github.io"><img src="https://img.shields.io/badge/mirukyのIT備忘録（ブログ）-6F51A1?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Blog" /></a>&nbsp;
-  <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/Qiita-55C500?style=for-the-badge&logo=qiita&logoColor=white" alt="Qiita" /></a>&nbsp;
-  <a href="https://x.com/miruky_tech"><img src="https://img.shields.io/badge/@miruky__tech-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>&nbsp;
-  <img src="https://komarev.com/ghpvc/?username=miruky&label=Profile+views&color=FF9900&style=for-the-badge" alt="views" />
+  <a href="https://miruky.github.io"><img src="https://img.shields.io/badge/mirukyのIT備忘録（ブログ）-6F51A1?style=flat-square&logo=googlechrome&logoColor=white" alt="Blog" /></a>
+  <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white" alt="Qiita" /></a>
+  <a href="https://x.com/miruky_tech"><img src="https://img.shields.io/badge/@miruky__tech-1A1E24?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
+  <img src="https://komarev.com/ghpvc/?username=miruky&label=views&color=30363D&style=flat-square" alt="views" />
 </p>
 
 </div>
 
-<!-- ═══════════════════════════════  ABOUT  ═══════════════════════════════ -->
-## 🐹 About Me
+<img src="./assets/section-about.svg" alt="About" />
 
-- ☁️ 普段は **AWS を使用したクラウドインフラの設計・構築 〜 運用・保守** の業務を行っています
-- ✍️ Qiita にて **AWS・AI・セキュリティ** を中心とした技術記事を投稿しています
-- 🏗️ 最近は **Terraform × Amazon Bedrock** による生成AI基盤づくりに関心があります
-- 🎓 保有資格 &nbsp;→&nbsp; **AWS 全冠** ・ IPA **AP / NW / SC** ・ **LPIC-3**
-- 📍 Tokyo, Japan &nbsp;・&nbsp; he/him
+| | |
+| :-- | :-- |
+| **Cloud** | AWS を用いたクラウドインフラの設計・構築 〜 運用・保守 |
+| **Writing** | Qiita で AWS・AI・セキュリティ を中心に技術記事を連載 |
+| **Focus** | Terraform &#215; Amazon Bedrock による生成 AI 基盤づくり |
+| **Certs** | AWS 全冠 / IPA AP・NW・SC / LPIC-3 |
+| **Based** | Tokyo, Japan |
 
-<!-- ═══════════════════════════════  QIITA STATS  ═══════════════════════════════ -->
-## 📊 Qiita 実績 <sub>（毎日自動更新）</sub>
+<img src="./assets/section-qiita.svg" alt="Qiita" />
 
 <div align="center">
 
-<!-- 記事数/フォロワーは Qiita API 直結 / コントリビューション等は自前パイプライン(history.json)参照 -->
 <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fqiita.com%2Fapi%2Fv2%2Fusers%2Fmiruky&query=%24.items_count&label=Articles&logo=qiita&logoColor=white&color=55C500&style=for-the-badge" alt="articles" /></a>
 <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fqiita.com%2Fapi%2Fv2%2Fusers%2Fmiruky&query=%24.followers_count&label=Followers&logo=qiita&logoColor=white&color=55C500&style=for-the-badge" alt="followers" /></a>
 <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.contribution&label=Contributions&logo=qiita&logoColor=white&color=55C500&style=for-the-badge" alt="contributions" /></a>
 
-<br/>
-
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.likes&label=%F0%9F%91%8D%20Likes&color=555&labelColor=55C500&style=flat" alt="likes" />
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.stocks&label=%F0%9F%94%96%20Stocks&color=555&labelColor=55C500&style=flat" alt="stocks" />
-<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.views&label=%F0%9F%91%80%20Views&color=555&labelColor=55C500&style=flat" alt="views" />
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.likes&label=Likes&color=30363D&labelColor=161B22&style=flat" alt="likes" />
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.stocks&label=Stocks&color=30363D&labelColor=161B22&style=flat" alt="stocks" />
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmiruky%2Fqiita-contibution-count%2Fmain%2Fdata%2Fhistory.json&query=%24.daily%5B-1%3A%5D.views&label=Views&color=30363D&labelColor=161B22&style=flat" alt="views" />
 
 </div>
 
-<!-- ═══════════════════════════════  CERTIFICATIONS  ═══════════════════════════════ -->
-## 🏆 Certifications
+<sub>Qiita API と自作の集計パイプライン（history.json）から毎日自動更新</sub>
+
+<img src="./assets/section-certifications.svg" alt="Certifications" />
 
 <div align="center">
 
-![AWS](https://img.shields.io/badge/AWS-全冠-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![応用情報](https://img.shields.io/badge/IPA-応用情報技術者_(AP)-0B5FFF?style=for-the-badge)
-![ネットワークスペシャリスト](https://img.shields.io/badge/IPA-ネットワークSP_(NW)-0B5FFF?style=for-the-badge)
-![情報処理安全確保支援士](https://img.shields.io/badge/IPA-登録セキスペ_(SC)-0B5FFF?style=for-the-badge)
-![LPIC-3](https://img.shields.io/badge/LPIC-Level_3-E00034?style=for-the-badge&logo=linux&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-全冠-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
+![応用情報](https://img.shields.io/badge/IPA-応用情報技術者_(AP)-30363D?style=flat-square)
+![ネットワークスペシャリスト](https://img.shields.io/badge/IPA-ネットワークSP_(NW)-30363D?style=flat-square)
+![情報処理安全確保支援士](https://img.shields.io/badge/IPA-登録セキスペ_(SC)-30363D?style=flat-square)
+![LPIC-3](https://img.shields.io/badge/LPIC-Level_3-E00034?style=flat-square&logo=linux&logoColor=white)
 
 </div>
 
-<!-- ═══════════════════════════════  TECH STACK  ═══════════════════════════════ -->
-## 🛠️ Tech Stack
+<img src="./assets/section-stack.svg" alt="Tech Stack" />
 
 <div align="center">
 
@@ -75,43 +71,31 @@
 | **CI / CD** | ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![AWS CodePipeline](https://img.shields.io/badge/AWS_CodePipeline-232F3E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0zMCwzMSBMMzUsMzEgTDM1LDI5IEwzMCwyOSBMMzAsMzEgWk0zNyw2MSBMMzUsNjAgTDQyLDQyIEw0NCw0MyBMMzcsNjEgWk00Niw1NiBMNTEsNTEgTDQ2LDQ2IEw0Nyw0NSBMNTMsNTAgQzUzLDUwIDU0LDUxIDU0LDUxIEM1NCw1MSA1Myw1MiA1Myw1MiBMNDcsNTcgTDQ2LDU2IFpNMjYsNTEgQzI2LDUxIDI2LDUwIDI2LDUwIEwzMiw0NSBMMzQsNDYgTDI4LDUxIEwzMyw1NiBMMzIsNTcgTDI2LDUyIEMyNiw1MiAyNiw1MSAyNiw1MSBMMjYsNTEgWk02MywzNSBMMTgsMzUgQzE3LDM1IDE1LDMzIDE1LDMyIEwxNSwzMSBMMjcsMzEgTDI3LDI5IEwxNSwyOSBMMTUsMTggQzE1LDE3IDE3LDE1IDE4LDE1IEw2MywxNSBDNjQsMTUgNjYsMTcgNjYsMTggTDY2LDI5IEwzOCwyOSBMMzgsMzEgTDY2LDMxIEw2NiwzMiBDNjYsMzMgNjQsMzUgNjMsMzUgTDYzLDM1IFpNMjIsNjYgTDU4LDY2IEw1OCwzNyBMMjIsMzcgTDIyLDY2IFpNNjMsMTMgTDE4LDEzIEMxNSwxMyAxMywxNSAxMywxOCBMMTMsMzIgQzEzLDM1IDE1LDM3IDE4LDM3IEwyMCwzNyBMMjAsNjcgQzIwLDY4IDIwLDY4IDIxLDY4IEw1OSw2OCBDNjAsNjggNjAsNjggNjAsNjcgTDYwLDM3IEw2MywzNyBDNjYsMzcgNjgsMzUgNjgsMzIgTDY4LDE4IEM2OCwxNSA2NiwxMyA2MywxMyBMNjMsMTMgWiIvPjwvc3ZnPg==&logoColor=white) ![AWS CodeBuild](https://img.shields.io/badge/AWS_CodeBuild-232F3E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik02NSwyMiBMNTksMTcgTDU0LDIyIEw2NSwyMiBaTTU3LDE2IEw0NSwxNiBMNTIsMjEgTDU3LDE2IFpNNTIsMzQgTDQyLDM3IEw2MSwzNyBMNTIsMzQgWk0zOCw1NyBMNjUsNTcgTDY1LDM5IEwzOCwzOSBMMzgsNTcgWk01MCwyMiBMNDMsMTcgTDM2LDIyIEw1MCwyMiBaTTM0LDIxIEw0MSwxNiBMMjgsMTYgTDM0LDIxIFpNMzIsMjIgTDI2LDE3IEwxOSwyMiBMMjksMjIgTDMyLDIyIFpNMjgsMjQgTDIwLDI0IEwyOCwzMiBMMjgsMjQgWk0yOCwzNSBMMTgsNDQgTDI4LDUzIEwyOCwzNSBaTTI4LDU2IEwxOCw2NiBMMTgsNjYgTDI4LDY2IEwyOCw1NiBaTTE4LDQ2IEwxOCw2MyBMMjcsNTUgTDE4LDQ2IFpNMTgsNDEgTDI3LDM0IEwxOCwyNSBMMTgsNDEgWk0xNywyMSBMMjMsMTYgTDE3LDE2IEwxNywyMSBaTTE1LDE0IEwxMywxNCBMMTMsMjQgTDE1LDI0IEwxNSwyMyBMMTUsMTUgTDE1LDE0IFpNNjksMjMgQzY5LDI0IDY4LDI0IDY4LDI0IEw1MywyNCBMNTMsMzIgTDY2LDM3IEw2NiwzNyBDNjYsMzcgNjcsMzggNjcsMzggTDY3LDU4IEM2Nyw1OSA2Niw1OSA2Niw1OSBMMzcsNTkgQzM2LDU5IDM2LDU5IDM2LDU4IEwzNiwzOCBDMzYsMzggMzYsMzcgMzYsMzcgTDM2LDM3IEw1MSwzMiBMNTEsMjQgTDMwLDI0IEwzMCw2NyBDMzAsNjggMjksNjggMjksNjggTDE3LDY4IEMxNiw2OCAxNiw2OCAxNiw2NyBMMTYsMjYgTDEyLDI2IEMxMSwyNiAxMSwyNiAxMSwyNSBMMTEsMTMgQzExLDEyIDExLDEyIDEyLDEyIEwxNiwxMiBDMTcsMTIgMTcsMTIgMTcsMTMgTDE3LDE0IEw2MCwxNCBMNjksMjIgQzY5LDIzIDY5LDIzIDY5LDIzIEw2OSwyMyBaTTQ4LDU1IEw1NCw0MiBMNTIsNDEgTDQ3LDU1IEw0OCw1NSBaTTU0LDUxIEw1NSw1MiBMNTksNDkgQzYwLDQ5IDYwLDQ4IDYwLDQ4IEM2MCw0OCA2MCw0NyA1OSw0NyBMNTYsNDQgTDU0LDQ1IEw1Nyw0OCBMNTQsNTEgWk00MSw0OCBDNDEsNDggNDEsNDcgNDEsNDcgQzQxLDQ3IDQxLDQ3IDQxLDQ2IEw0Niw0MyBMNDcsNDQgTDQzLDQ3IEw0Niw1MCBMNDUsNTIgTDQxLDQ4IFoiLz48L3N2Zz4=&logoColor=white) ![AWS CodeDeploy](https://img.shields.io/badge/AWS_CodeDeploy-232F3E?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yOCw2NyBMNTQsNjcgTDU0LDUwIEwyOCw1MCBMMjgsNjcgWk01NSw0OCBMMjcsNDggQzI2LDQ4IDI2LDQ4IDI2LDQ5IEwyNiw2OCBDMjYsNjkgMjYsNjkgMjcsNjkgTDU1LDY5IEM1Niw2OSA1Niw2OSA1Niw2OCBMNTYsNDkgQzU2LDQ4IDU2LDQ4IDU1LDQ4IEw1NSw0OCBaTTM3LDY1IEw0Myw1MSBMNDUsNTIgTDM5LDY2IEwzNyw2NSBaTTQ5LDU5IEw0NSw1NSBMNDcsNTQgTDUxLDU4IEM1MSw1OCA1MSw1OCA1MSw1OSBDNTEsNTkgNTEsNTkgNTEsNTkgTDQ2LDYzIEw0NSw2MSBMNDksNTkgWk0zMSw1OCBDMzEsNTggMzEsNTggMzEsNTcgQzMxLDU3IDMxLDU3IDMxLDU3IEwzNiw1MyBMMzcsNTUgTDM0LDU4IEwzNyw2MSBMMzYsNjIgTDMxLDU4IFpNNjYsMzUgQzY0LDMzIDYyLDMyIDU5LDMyIEM1NSwzMiA1MiwzMyA1MSwzNiBDNTAsMjYgNDgsMTggNDUsMTQgQzU2LDE2IDY1LDI0IDY3LDM2IEM2NiwzNSA2NiwzNSA2NiwzNSBMNjYsMzUgWk00OCwzNSBMNDgsMzUgQzQ2LDMzIDQzLDMyIDQxLDMyIEMzNywzMiAzNCwzMyAzMiwzNSBDMzMsMjMgMzcsMTQgNDEsMTQgQzQxLDE0IDQxLDE0IDQxLDE0IEM0NCwxNCA0OCwyMyA0OSwzNiBDNDgsMzYgNDgsMzYgNDgsMzUgTDQ4LDM1IFpNMzAsMzYgQzMwLDM2IDMwLDM2IDMwLDM1IEwyOSwzNSBDMjcsMzMgMjUsMzIgMjIsMzIgQzE5LDMyIDE2LDMzIDE1LDM1IEMxNywyNCAyNSwxNiAzNiwxNCBDMzMsMTggMzEsMjYgMzAsMzYgTDMwLDM2IFpNNDEsMTIgQzI1LDEyIDEzLDI0IDEyLDQwIEMxMiw0MCAxMiw0MCAxMyw0MSBMMjMsNDcgTDI0LDQ2IEwxNCwzOSBDMTUsMzcgMTYsMzYgMTksMzUgQzIwLDM0IDIxLDM0IDIyLDM0IEMyNCwzNCAyNiwzNSAyOCwzNyBMMjgsMzcgQzMwLDM4IDMwLDQwIDMwLDQwIEMzMCw0MSAzMiw0NiAzMiw0NiBMMzQsNDUgTDMyLDQwIEwzMiw0MCBDMzMsMzYgMzcsMzQgNDEsMzQgQzQzLDM0IDQ1LDM1IDQ2LDM3IEM0NiwzNyA0OCwzOCA0OSw0MCBMNDksNDAgTDQ3LDQ1IEw0OSw0NiBMNTEsNDEgQzUxLDQxIDUxLDQxIDUxLDQwIEM1MSwzNyA1NCwzNCA1OSwzNCBDNjEsMzQgNjMsMzUgNjUsMzcgQzY2LDM4IDY3LDM5IDY3LDM5IEw1OCw0NSBMNTksNDcgTDY5LDQxIEM2OSw0MSA2OSw0MCA2OSw0MCBDNjksMjQgNTYsMTIgNDEsMTIgWiIvPjwvc3ZnPg==&logoColor=white) |
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![HCL](https://img.shields.io/badge/HCL-7B42BC?style=flat-square&logo=terraform&logoColor=white) |
 
-<!-- ═══════════════════════════════  GITHUB STATS  ═══════════════════════════════ -->
-## 📈 GitHub Stats
+<img src="./assets/section-github.svg" alt="GitHub" />
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=miruky&show_icons=true&count_private=true&hide_border=true&title_color=FF9900&icon_color=55C500&text_color=C9D1D9&bg_color=0D1117" alt="stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=miruky&layout=compact&hide_border=true&langs_count=8&title_color=FF9900&text_color=C9D1D9&bg_color=0D1117" alt="top langs" />
+<img src="https://streak-stats.demolab.com?user=miruky&hide_border=true&background=0D1117&stroke=21262D&ring=FF9900&fire=FF9900&currStreakNum=E6EDF3&sideNums=E6EDF3&currStreakLabel=FF9900&sideLabels=7D8590&dates=7D8590" alt="streak" />
 
-<br/>
-
-<img src="https://streak-stats.demolab.com?user=miruky&hide_border=true&background=0D1117&stroke=FF9900&ring=FF9900&fire=FF9900&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF9900&sideLabels=C9D1D9&dates=8B949E" alt="streak" />
-
-<br/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=miruky&bg_color=0D1117&color=FF9900&line=FF9900&point=55C500&area=true&hide_border=true" alt="activity graph" />
-
-</div>
-
-<!-- ═══════════════════════════════  SNAKE  ═══════════════════════════════ -->
-<!-- 貢献グラフを蛇が食べるアニメ。 .github/workflows/snake.yml が output ブランチに SVG を生成 -->
-<div align="center">
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=miruky&bg_color=0D1117&color=FF9900&line=FF9900&point=55C500&area=true&area_color=FF9900&hide_border=true" alt="activity" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/miruky/miruky/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/miruky/miruky/output/github-contribution-grid-snake.svg" />
-  <img alt="snake animation" src="https://raw.githubusercontent.com/miruky/miruky/output/github-contribution-grid-snake.svg" />
+  <img width="100%" alt="contribution snake" src="https://raw.githubusercontent.com/miruky/miruky/output/github-contribution-grid-snake.svg" />
 </picture>
 
 </div>
 
-<!-- ═══════════════════════════════  LINKS  ═══════════════════════════════ -->
-## 🔗 Links
+<img src="./assets/section-links.svg" alt="Links" />
 
-- 📝 **[Qiita](https://qiita.com/miruky)** — AWS・AI・セキュリティの技術記事（10 シリーズ連載中）
-- 💻 **[Sample Code](https://github.com/miruky/qiita)** — 連載記事のサンプルコード集
-- 🌐 **[Blog](https://miruky.github.io)** — ポートフォリオ・技術ブログサイト
-- 📊 **[Qiita Contribution Tracker](https://github.com/miruky/qiita-contibution-count)** — 自作のコントリビューション可視化ツール
+- **[Qiita](https://qiita.com/miruky)** &#8212; AWS・AI・セキュリティ の技術記事（10 シリーズ連載中）
+- **[Sample Code](https://github.com/miruky/qiita)** &#8212; 連載記事のサンプルコード集
+- **[Blog](https://miruky.github.io)** &#8212; ポートフォリオ・技術ブログサイト
+- **[Qiita Contribution Tracker](https://github.com/miruky/qiita-contibution-count)** &#8212; 自作のコントリビューション可視化ツール
 
-<!-- ═══════════════════════════════  FOOTER  ═══════════════════════════════ -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FFCE85,100:FF9900&height=120&section=footer" alt="footer" />
+<br/>
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+<div align="center"><sub>AWS Cloud Engineer based in Tokyo</sub></div>
