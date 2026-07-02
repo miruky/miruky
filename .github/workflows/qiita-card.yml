@@ -31,12 +31,18 @@ jobs:
       - name: Render latest articles card
         run: python scripts/render_articles_card.py
 
+      - name: Bump card cache-busters in README
+        # camo(GitHubの画像プロキシ)は24hキャッシュするため、日次カードのURLキーを進めて即時反映させる
+        run: |
+          d=$(date -u +%Y%m%d)
+          sed -E -i "s/((qiita-card|articles-card)\.svg)\?d=[0-9]+/\1?d=${d}/g" README.md
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- assets/qiita-card.svg assets/articles-card.svg; then
-            git add assets/qiita-card.svg assets/articles-card.svg
+          if ! git diff --quiet -- assets/qiita-card.svg assets/articles-card.svg README.md; then
+            git add assets/qiita-card.svg assets/articles-card.svg README.md
             git commit -m "chore: update Qiita stats & articles cards [skip ci]"
             git push
           else

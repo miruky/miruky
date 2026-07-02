@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/header.svg" width="100%" alt="miruky" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/header.svg?v=20260702b" width="100%" alt="miruky" />
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/roles.svg" width="560" alt="roles" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/roles.svg?v=20260702b" width="560" alt="roles" />
 
 <p>
   <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white" alt="Qiita" /></a>
@@ -12,49 +12,49 @@
   <img src="https://komarev.com/ghpvc/?username=miruky&label=views&color=30363D&style=flat-square" alt="views" />
 </p>
 
-<a href="https://miruky.github.io"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/blog-badge.svg" width="300" alt="mirukyのIT備忘録 (Blog)" /></a>
+<a href="https://miruky.github.io"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/blog-badge.svg?v=20260702b" width="300" alt="mirukyのIT備忘録 (Blog)" /></a>
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-about.svg" alt="About" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-about.svg?v=20260702b" alt="About" />
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/about-card.svg" width="96%" alt="自己紹介" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/about-card.svg?v=20260702b" width="96%" alt="自己紹介" />
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-qiita.svg" alt="Qiita" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-qiita.svg?v=20260702b" alt="Qiita" />
 
 <div align="center">
 
-<a href="https://qiita.com/miruky"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/qiita-card.svg" width="96%" alt="Qiita stats" /></a>
+<a href="https://qiita.com/miruky"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/qiita-card.svg?d=20260702" width="96%" alt="Qiita stats" /></a>
 
-<a href="https://qiita.com/miruky"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/articles-card.svg" width="96%" alt="最新の記事" /></a>
+<a href="https://qiita.com/miruky"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/articles-card.svg?d=20260702" width="96%" alt="最新の記事" /></a>
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-certifications.svg" alt="Certifications" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-certifications.svg?v=20260702b" alt="Certifications" />
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-aws.svg" height="40" alt="AWS 認定 全冠" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-ap.svg" height="40" alt="応用情報技術者 (AP)" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-nw.svg" height="40" alt="ネットワークスペシャリスト (NW)" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-aws.svg?v=20260702b" height="40" alt="AWS 認定 全冠" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-ap.svg?v=20260702b" height="40" alt="応用情報技術者 (AP)" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-nw.svg?v=20260702b" height="40" alt="ネットワークスペシャリスト (NW)" />
 <br/>
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-sc.svg" height="40" alt="セキュリティスペシャリスト (SC)" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-lpic.svg" height="40" alt="LPIC Level 3" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-sc.svg?v=20260702b" height="40" alt="セキュリティスペシャリスト (SC)" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-lpic.svg?v=20260702b" height="40" alt="LPIC Level 3" />
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-stack.svg" alt="Tech Stack" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-stack.svg?v=20260702b" alt="Tech Stack" />
 
 <div align="center">
 
 <img src="https://skillicons.dev/icons?i=python,typescript,terraform,githubactions,linux,git,bash&theme=dark" alt="skills" />
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/stack-card.svg" width="96%" alt="技術スタック" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/stack-card.svg?v=20260702b" width="96%" alt="技術スタック" />
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-github.svg" alt="GitHub" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-github.svg?v=20260702b" alt="GitHub" />
 
 <div align="center">
 
@@ -70,7 +70,7 @@
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-links.svg" alt="Links" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-links.svg?v=20260702b" alt="Links" />
 
 - **[Qiita](https://qiita.com/miruky)** &#8212; AWS・AI・セキュリティ の技術記事（全 10 シリーズ連載）
 - **[サンプルコード](https://github.com/miruky/qiita)** &#8212; 連載記事のサンプルコード集
@@ -79,4 +79,4 @@
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/footer.svg" width="100%" alt="" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/footer.svg?v=20260702b" width="100%" alt="" />
