@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167 44" width="167" height="44" role="img" aria-label="LPIC Level 3">
+<defs>
+  <linearGradient id="clg" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#D64545" stop-opacity="0.22"/><stop offset="1" stop-color="#D64545" stop-opacity="0.06"/>
+  </linearGradient>
+  <linearGradient id="clr" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F5A7A0" stop-opacity="0.55"/><stop offset="0.5" stop-color="#D64545" stop-opacity="0.20"/><stop offset="1" stop-color="#050A14" stop-opacity="0.12"/>
+  </linearGradient>
+  <linearGradient id="clgl" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.12"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="cld" x="-30%" y="-40%" width="160%" height="200%" color-interpolation-filters="sRGB">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#050A14" flood-opacity="0.45"/>
+  </filter>
+  <clipPath id="clc"><rect x="1" y="1" width="165" height="42" rx="21"/></clipPath>
+</defs>
+<g filter="url(#cld)">
+  <rect x="1" y="1" width="165" height="42" rx="21" fill="url(#clg)"/>
+  <rect x="2" y="2" width="163" height="16" rx="14" fill="#FFFFFF" opacity="0.07"/>
+  <g clip-path="url(#clc)">
+    <rect x="-120" y="-10" width="90" height="64" fill="url(#clgl)" transform="skewX(-18)">
+      <animate attributeName="x" values="-120;247;247" keyTimes="0;0.10;1" dur="13s" begin="12.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(16,14)" fill="none" stroke="#F5A7A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="4"/><path d="M5.6 9.4 L4.4 14 L8 12 L11.6 14 L10.4 9.4"/></g>
+  <text x="42" y="27" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="14" font-weight="600" fill="#E9F1FA">LPIC</text>
+  <rect x="86.4" y="11" width="67" height="22" rx="11" fill="#D64545" fill-opacity="0.24" stroke="#D64545" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="120" y="26" text-anchor="middle" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#F5A7A0">Level 3</text>
+  <rect x="1" y="1" width="165" height="42" rx="21" fill="none" stroke="url(#clr)" stroke-width="1.2"/>
+</g>
+</svg>

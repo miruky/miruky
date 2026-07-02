@@ -38,17 +38,19 @@
 
 <div align="center">
 
-![AWS](https://img.shields.io/badge/AWS-全冠-5CD1F0?style=flat-square&logo=amazonwebservices&logoColor=white)
-![応用情報](https://img.shields.io/badge/IPA-応用情報技術者_(AP)-30363D?style=flat-square)
-![ネットワークスペシャリスト](https://img.shields.io/badge/IPA-ネットワークスペシャリスト_(NW)-30363D?style=flat-square)
-![セキュリティスペシャリスト](https://img.shields.io/badge/IPA-セキュリティスペシャリスト_(SC)-30363D?style=flat-square)
-![LPIC-3](https://img.shields.io/badge/LPIC-Level_3-E00034?style=flat-square&logo=linux&logoColor=white)
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-aws.svg" height="40" alt="AWS 認定 全冠" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-ap.svg" height="40" alt="応用情報技術者 (AP)" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-nw.svg" height="40" alt="ネットワークスペシャリスト (NW)" />
+<br/>
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-sc.svg" height="40" alt="セキュリティスペシャリスト (SC)" /> <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/cert-lpic.svg" height="40" alt="LPIC Level 3" />
 
 </div>
 
 <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-stack.svg" alt="Tech Stack" />
 
 <div align="center">
+
+<img src="https://skillicons.dev/icons?i=python,typescript,terraform,githubactions,linux,git,bash&theme=dark" alt="skills" />
+
+<br/><br/>
 
 <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/stack-card.svg" width="96%" alt="技術スタック" />
 
