@@ -95,47 +95,141 @@ I_CYCLE='<path d="M12.8 5 A5.6 5.6 0 0 0 3 5.6"/><path d="M3 2.6 L3 5.8 L6.2 5.8
 I_CODE='<path d="M5.5 4 L1.8 8 L5.5 12"/><path d="M10.5 4 L14.2 8 L10.5 12"/><path d="M9 2.5 L7 13.5"/>'
 I_MEDAL='<circle cx="8" cy="6" r="4"/><path d="M5.6 9.4 L4.4 14 L8 12 L11.6 14 L10.4 9.4"/>'
 
-# ============================================================ ABOUT CARD
+# ============================================================ ABOUT CARD（コズミック・バイオレット）
+VIO="#8A7DD8"; VIO_LT="#C9BEF5"; VIO_DP="#6B5CB7"; STARC="#DDE8FF"
+I_CHECK_V='<path d="M2 8.5 L6 12 L14 3.5" stroke="#C9BEF5"/>'
+
 def build_about():
     H=316
     rows=[
-        ("業務","WORK",I_CLOUD,"AWS を用いたクラウドインフラの設計・構築 〜 運用・保守"),
-        ("発信","WRITING",I_PEN,"Qiita で AWS・AI・セキュリティを中心に技術記事を連載"),
-        ("関心","FOCUS",I_SPARK,"CloudFormation と AWS Code シリーズを使った CI/CD パイプライン構築"),
+        ("業務","WORK",I_CLOUD,ACC,"AWS を用いたクラウドインフラの設計・構築 〜 運用・保守"),
+        ("発信","WRITING",I_PEN,ACC,"Qiita で AWS・AI・セキュリティを中心に技術記事を連載"),
+        ("関心","FOCUS",I_SPARK,"#B9A8F5","CloudFormation と AWS Code シリーズを使った CI/CD パイプライン構築"),
     ]
     body=""
-    for i,(jp,en,ic,desc) in enumerate(rows):
+    for i,(jp,en,ic,col,desc) in enumerate(rows):
         y=108+i*66
-        inner=(f'<rect x="32" y="{y-22}" width="36" height="36" rx="10" fill="{ACC}" fill-opacity="0.10" stroke="{ACC}" stroke-opacity="0.28" stroke-width="1"/>'
-               + icon(42, y-12, ic) +
+        inner=(f'<rect x="32" y="{y-22}" width="36" height="36" rx="10" fill="url(#abibox)" stroke="url(#abiboxr)" stroke-width="1"/>'
+               + icon(42, y-12, ic, col) +
                f'<text x="86" y="{y-6}" font-family="{JP}" font-size="15" font-weight="700" fill="{TEXT}">{jp}</text>'
                f'<text x="122" y="{y-7}" font-family="{MONO}" font-size="10" letter-spacing="2" fill="{MUTED}">{en}</text>'
                f'<text x="86" y="{y+16}" font-family="{JP}" font-size="13.5" fill="{SUB}">{desc}</text>')
         body+=enter(i, inner)
         if i<2:
-            body+=f'<line x1="32" y1="{y+32}" x2="540" y2="{y+32}" stroke="{ACC}" stroke-opacity="0.08" stroke-width="1"/>'
+            body+=f'<line x1="32" y1="{y+32}" x2="540" y2="{y+32}" stroke="{VIO}" stroke-opacity="0.12" stroke-width="1"/>'
 
-    # 右パネル: 要点
+    # 右パネル: 要点（バイオレット・グラス）
     facts=[
         (I_PIN, "東京（Tokyo）を拠点に活動"),
         (I_MEDAL, "AWS 認定 全冠"),
-        (I_CHECK, "IPA : AP ・ NW ・ SC"),
-        (I_CHECK, "LPIC Level 3"),
+        (I_CHECK_V, "IPA : AP ・ NW ・ SC"),
+        (I_CHECK_V, "LPIC Level 3"),
     ]
-    panel=(f'<rect x="572" y="86" width="260" height="200" rx="14" fill="{ACC}" fill-opacity="0.07" stroke="{ACC}" stroke-opacity="0.22" stroke-width="1"/>'
-           f'<rect x="573" y="87" width="258" height="26" rx="13" fill="#FFFFFF" opacity="0.04"/>'
-           f'<text x="592" y="116" font-family="{MONO}" font-size="10" letter-spacing="3" fill="{MUTED}">PROFILE</text>'
+    panel=(f'<rect x="572" y="86" width="260" height="200" rx="14" fill="url(#abpanel)" stroke="url(#abprim)" stroke-width="1"/>'
+           f'<rect x="573" y="87" width="258" height="26" rx="13" fill="#FFFFFF" opacity="0.05"/>'
+           f'<text x="592" y="116" font-family="{MONO}" font-size="10" letter-spacing="3" fill="{VIO_LT}">PROFILE</text>'
            f'<text x="666" y="116" font-family="{JP}" font-size="11" letter-spacing="2" fill="{MUTED}">要点</text>')
     for j,(ic,txt) in enumerate(facts):
         fy=148+j*34
-        panel+=(icon(592, fy-12, ic) +
+        panel+=(icon(592, fy-12, ic, VIO_LT) +
                 f'<text x="618" y="{fy}" font-family="{JP}" font-size="13" fill="{TEXT}">{txt}</text>')
         if j<3:
-            panel+=f'<line x1="592" y1="{fy+16}" x2="812" y2="{fy+16}" stroke="{ACC}" stroke-opacity="0.08" stroke-width="1"/>'
+            panel+=f'<line x1="592" y1="{fy+16}" x2="812" y2="{fy+16}" stroke="{VIO}" stroke-opacity="0.12" stroke-width="1"/>'
     body+=enter(3, panel)
 
+    # ---- 宇宙レイヤ（星・きらめき・流れ星・環つき惑星） ----
+    stars=""
+    for x,y,op,r in [(300,26,0.4,0.9),(420,40,0.3,0.7),(500,22,0.45,1.0),(640,34,0.35,0.8),(760,24,0.4,1.0),
+                     (240,52,0.25,0.7),(552,120,0.3,0.8),(556,186,0.25,0.7),(550,246,0.3,0.8),
+                     (620,300,0.3,0.8),(760,302,0.35,0.9),(200,300,0.25,0.7),(844,150,0.3,0.8),(846,224,0.25,0.7)]:
+        stars+=f'<circle cx="{x}" cy="{y}" r="{r}" fill="{STARC}" opacity="{op}"/>'
+    for x,y,c,dur,beg in [(350,40,ACC_LT,4.2,0.5),(700,52,VIO_LT,3.6,1.3),(556,206,"#FFFFFF",5.0,2.1),(250,296,VIO_LT,4.6,2.9)]:
+        stars+=(f'<g transform="translate({x},{y})">'
+                f'<path d="M0 -3 L0.7 -0.7 L3 0 L0.7 0.7 L0 3 L-0.7 0.7 L-3 0 L-0.7 -0.7 Z" fill="{c}" opacity="0.5">'
+                f'<animate attributeName="opacity" values="0.2;1;0.4;0.2" keyTimes="0;0.2;0.5;1" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
+                f'</path></g>')
+    stars+=(f'<line x1="600" y1="24" x2="644" y2="38" stroke="url(#abshoot)" stroke-width="1.2" stroke-linecap="round" opacity="0">'
+            f'<animate attributeName="opacity" values="0;0;0.9;0" keyTimes="0;0.02;0.06;0.12" dur="16s" begin="7s" repeatCount="indefinite"/>'
+            f'<animateTransform attributeName="transform" type="translate" values="-26 -9;60 22;60 22" keyTimes="0;0.12;1" dur="16s" begin="7s" repeatCount="indefinite"/></line>')
+    stars+=(f'<g transform="translate(76,282)">'
+            f'<circle r="9" fill="url(#abplanet)"/>'
+            f'<circle cx="-3" cy="-3.4" r="2.6" fill="#FFFFFF" opacity="0.35" filter="url(#absoft2)"/>'
+            f'<ellipse rx="16.5" ry="5.4" fill="none" stroke="#9FB0E8" stroke-opacity="0.5" stroke-width="1" transform="rotate(-14)"/>'
+            f'<g transform="rotate(-14)"><circle cx="16.5" cy="0" r="1.4" fill="#CFE0FF">'
+            f'<animateMotion dur="22s" repeatCount="indefinite" path="M0 0 a16.5 5.4 0 1 1 0 0.1 Z"/></circle></g></g>')
+
+    gx=int(860+0.33*H+200)
+    tray_c=(f'<g clip-path="url(#abround)">'
+            f'<rect x="2" y="2" width="856" height="{H-4}" fill="url(#abtray)"/>'
+            f'<circle cx="170" cy="50" r="150" fill="url(#aborbC)" filter="url(#absoft)"/>'
+            f'<circle cx="760" cy="70" r="160" fill="url(#aborbV)" filter="url(#absoft)"/>'
+            f'<circle cx="430" cy="310" r="150" fill="url(#aborbV2)" filter="url(#absoft)"/>'
+            f'<rect x="2" y="2" width="856" height="{H-4}" filter="url(#abdust)" opacity="0.4"/>'
+            f'<rect x="2" y="2" width="856" height="{H-4}" fill="url(#abglass)"/>'
+            f'<rect x="2" y="2" width="856" height="60" fill="url(#absheen)"/>'
+            f'{stars}'
+            f'<rect x="-300" y="-40" width="240" height="{H+80}" fill="url(#abglint)" transform="skewX(-18)">'
+            f'<animate attributeName="x" values="-300;{gx};{gx}" keyTimes="0;0.11;1" dur="11s" begin="4.5s" repeatCount="indefinite"/></rect>'
+            f'</g>')
+
+    defs_c=f'''<defs>
+  <radialGradient id="abtray" cx="0.5" cy="0.22" r="1.0">
+    <stop offset="0" stop-color="#121631"/><stop offset="1" stop-color="#090C18"/>
+  </radialGradient>
+  <linearGradient id="abglass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="{ACC}" stop-opacity="0.07"/><stop offset="1" stop-color="{VIO}" stop-opacity="0.05"/>
+  </linearGradient>
+  <linearGradient id="abrim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#DDF6FF" stop-opacity="0.5"/><stop offset="0.5" stop-color="{VIO}" stop-opacity="0.28"/><stop offset="1" stop-color="#0A0620" stop-opacity="0.12"/>
+  </linearGradient>
+  <linearGradient id="absheen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="aborbC" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="{ACC}" stop-opacity="0.18"/><stop offset="1" stop-color="{ACC}" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="aborbV" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="{VIO}" stop-opacity="0.24"/><stop offset="1" stop-color="{VIO}" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="aborbV2" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="{VIO_DP}" stop-opacity="0.14"/><stop offset="1" stop-color="{VIO_DP}" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="abglint" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.09"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="abibox" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="{ACC}" stop-opacity="0.13"/><stop offset="1" stop-color="{VIO}" stop-opacity="0.12"/>
+  </linearGradient>
+  <linearGradient id="abiboxr" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="{ACC}" stop-opacity="0.4"/><stop offset="1" stop-color="{VIO}" stop-opacity="0.42"/>
+  </linearGradient>
+  <linearGradient id="abpanel" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="{VIO}" stop-opacity="0.12"/><stop offset="1" stop-color="{VIO}" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="abprim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="{VIO_LT}" stop-opacity="0.45"/><stop offset="0.5" stop-color="{VIO}" stop-opacity="0.2"/><stop offset="1" stop-color="#0A0620" stop-opacity="0.1"/>
+  </linearGradient>
+  <radialGradient id="abplanet" cx="0.36" cy="0.3" r="0.8">
+    <stop offset="0" stop-color="#8B93D8"/><stop offset="0.6" stop-color="#3A3F7A"/><stop offset="1" stop-color="#171B3E"/>
+  </radialGradient>
+  <linearGradient id="abshoot" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/>
+  </linearGradient>
+  <filter id="absoft" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="absoft2" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="1.6"/></filter>
+  <filter id="abdust" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.75  0 0 0 0 0.82  0 0 0 0 1  0 0 0 0.55 -0.47"/>
+  </filter>
+  <filter id="abgrain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.55  0 0 0 0 0.6  0 0 0 0 0.95  0 0 0 0.05 0"/>
+  </filter>
+  <clipPath id="abround"><rect x="2" y="2" width="856" height="{H-4}" rx="20"/></clipPath>
+</defs>'''
+
     svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 {H}" width="860" height="{H}" role="img" aria-label="自己紹介">'
-         + defs("ab",H) + tray("ab",H, orb='<circle cx="180" cy="60" r="150"/>', sweep_begin=4.5, sweep_dur=11)
+         + defs_c + tray_c
          + header("ab","About Me","自己紹介","@miruky ・ he/him")
          + body + frame("ab",H) + '</svg>')
     with open(os.path.join(ASSETS,"about-card.svg"),"w",encoding="utf-8") as f: f.write(svg)
