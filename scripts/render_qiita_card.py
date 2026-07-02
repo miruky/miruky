@@ -87,6 +87,20 @@ def build(data):
          f'<rect x="700" y="264" width="{116*st_pct:.0f}" height="8" rx="4" fill="url(#barg)">'
          f'<animate attributeName="width" values="0;{116*st_pct:.0f}" dur="1.1s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1"/></rect>')
 
+    # 直近30日の増分チップ（矢印＋数値＋期間ラベルを一体化して誤読を防ぐ）
+    dtxt=f"+{delta:,}"
+    jp_txt=f"直近{span}日"
+    dw=22+len(dtxt)*6.8+8
+    jpw=sum(9.5 if ord(c)>0x2E7F else 5.5 for c in jp_txt)
+    chip_w=int(dw+jpw+12)
+    chip_x=600-chip_w
+    delta_chip=(f'<g transform="translate({chip_x},104)">'
+                f'<rect x="0" y="0" width="{chip_w}" height="20" rx="10" fill="{ACC}" fill-opacity="0.14"/>'
+                f'<path d="M8 13 l4 -6 l4 6 Z" fill="{HERO}"/>'
+                f'<text x="22" y="14" font-family="{MONO}" font-size="11" font-weight="700" fill="{HERO}">{dtxt}</text>'
+                f'<text x="{dw:.0f}" y="14" font-family="{JP}" font-size="9.5" fill="{MINT2}">{jp_txt}</text>'
+                f'</g>')
+
     svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="Qiita 活動記録">
 <defs>
   <radialGradient id="tray" cx="0.5" cy="0.28" r="0.9">
@@ -178,13 +192,9 @@ def build(data):
 <!-- ===== support tiles ===== -->
 {glass_tile(416,88,200,134,16,'tileGlass')}
 {icon(432,106, sprout)}
-<g transform="translate(536,104)">
-  <rect x="0" y="0" width="64" height="20" rx="10" fill="{ACC}" fill-opacity="0.14"/>
-  <path d="M8 13 l4 -6 l4 6 Z" fill="{HERO}"/>
-  <text x="22" y="14" font-family="{MONO}" font-size="11" font-weight="700" fill="{HERO}">+{delta:,}</text>
-</g>
+{delta_chip}
 <text x="432" y="180" font-family="{SANS}" font-size="30" font-weight="800" fill="{NUM}">{contribution:,}</text>
-<text x="432" y="204" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{MINT}">CONTRIBUTION <tspan font-family="{JP}" letter-spacing="0">・ 直近{span}日</tspan></text>
+<text x="432" y="204" font-family="{MONO}" font-size="10" letter-spacing="1.2" fill="{MINT}">CONTRIBUTION <tspan font-family="{JP}" letter-spacing="0">・ 累計</tspan></text>
 
 {glass_tile(632,88,200,134,16,'tileGlass')}
 {icon(648,106, pencil)}

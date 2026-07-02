@@ -50,8 +50,6 @@
 
 <img src="https://skillicons.dev/icons?i=python,typescript,terraform,githubactions,linux,git,bash&theme=dark" alt="skills" />
 
-<br/><br/>
-
 <img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/stack-card.svg" width="96%" alt="技術スタック" />
 
 </div>
