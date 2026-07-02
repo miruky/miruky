@@ -116,6 +116,11 @@ def build(data):
   <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
     <stop offset="0" stop-color="{ACC}" stop-opacity="0.30"/><stop offset="1" stop-color="{ACC}" stop-opacity="0"/>
   </radialGradient>
+  <linearGradient id="qglint" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
   <filter id="drop" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
     <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="{SHADOW}" flood-opacity="0.42"/>
   </filter>
@@ -137,9 +142,9 @@ def build(data):
   <!-- light-leak orbs behind hero -->
   <circle cx="150" cy="170" r="140" fill="url(#orb)" filter="url(#soft)"/>
   <circle cx="300" cy="300" r="110" fill="url(#orb)" filter="url(#soft)" opacity="0.7"/>
-  <!-- glass sweep -->
-  <rect x="-380" y="2" width="300" height="396" fill="#FFFFFF" opacity="0.05">
-    <animate attributeName="x" values="-380;860" dur="7s" begin="1.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+  <!-- diagonal glint（素早く通過 → 静止） -->
+  <rect x="-300" y="-40" width="240" height="480" fill="url(#qglint)" transform="skewX(-18)">
+    <animate attributeName="x" values="-300;1160;1160" keyTimes="0;0.11;1" dur="10s" begin="3s" repeatCount="indefinite"/>
   </rect>
 </g>
 

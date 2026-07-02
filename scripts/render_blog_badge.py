@@ -65,6 +65,11 @@ def build():
   <linearGradient id="shoot" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/>
   </linearGradient>
+  <linearGradient id="bglint" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.12"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
   <filter id="soft" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="7"/></filter>
   <filter id="soft2" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="3"/></filter>
   <filter id="drop" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB">
@@ -126,10 +131,10 @@ def build():
 <!-- rim + one asymmetric glint -->
 <rect x="2" y="2" width="336" height="86" rx="20" fill="none" stroke="url(#rim)" stroke-width="1.3"/>
 <circle cx="292" cy="74" r="8" fill="#FFFFFF" opacity="0.12" filter="url(#soft2)"/>
-<!-- sheen sweep -->
+<!-- diagonal glint（素早く通過 → 静止） -->
 <g clip-path="url(#pill)">
-  <rect x="-120" y="2" width="90" height="86" fill="#FFFFFF" opacity="0.06" transform="skewX(-18)">
-    <animate attributeName="x" values="-120;360" dur="4s" begin="0.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" keyTimes="0;1"/>
+  <rect x="-140" y="-20" width="110" height="130" fill="url(#bglint)" transform="skewX(-18)">
+    <animate attributeName="x" values="-140;480;480" keyTimes="0;0.13;1" dur="9s" begin="2.2s" repeatCount="indefinite"/>
   </rect>
 </g>
 </g>

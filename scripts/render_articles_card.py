@@ -67,6 +67,11 @@ def build(items):
   <radialGradient id="aorb" cx="0.5" cy="0.5" r="0.5">
     <stop offset="0" stop-color="{ACC}" stop-opacity="0.22"/><stop offset="1" stop-color="{ACC}" stop-opacity="0"/>
   </radialGradient>
+  <linearGradient id="aglint" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.09"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
   <filter id="asoft2" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="14"/></filter>
   <filter id="agrain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
@@ -79,8 +84,8 @@ def build(items):
   <rect x="2" y="2" width="856" height="232" fill="url(#atray)"/>
   <circle cx="700" cy="40" r="130" fill="url(#aorb)" filter="url(#asoft2)"/>
   <rect x="2" y="2" width="856" height="232" fill="url(#aglass)"/>
-  <rect x="-380" y="2" width="300" height="232" fill="#FFFFFF" opacity="0.04">
-    <animate attributeName="x" values="-380;860" dur="7s" begin="2.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+  <rect x="-300" y="-40" width="240" height="320" fill="url(#aglint)" transform="skewX(-18)">
+    <animate attributeName="x" values="-300;1100;1100" keyTimes="0;0.11;1" dur="10s" begin="6s" repeatCount="indefinite"/>
   </rect>
 </g>
 

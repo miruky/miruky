@@ -69,6 +69,11 @@ def build_header():
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="{ACCENT2}"/>
     </linearGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
     <radialGradient id="mglow" cx="0.5" cy="0.46" r="0.5">
       <stop offset="0" stop-color="{ACCENT}" stop-opacity="0.28"/><stop offset="0.6" stop-color="{ACCENT}" stop-opacity="0.08"/><stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/>
     </radialGradient>
@@ -104,9 +109,9 @@ def build_header():
 
   <!-- wordmark -->
   <text x="86" y="184" font-family="{SANS}" font-size="94" font-weight="800" letter-spacing="1" fill="#F0F6FC">miruky</text>
-  <!-- full-width diagonal sheen sweep（ワードマークを横切る光） -->
-  <rect x="-320" y="-20" width="200" height="360" fill="#FFFFFF" opacity="0.045" transform="skewX(-18)">
-    <animate attributeName="x" values="-320;1500" dur="8s" begin="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" keyTimes="0;1"/>
+  <!-- diagonal glint（柔らかいグラデ帯が素早く通過 → 静止） -->
+  <rect x="-340" y="-40" width="240" height="380" fill="url(#glint)" transform="skewX(-18)">
+    <animate attributeName="x" values="-340;1560;1560" keyTimes="0;0.11;1" dur="12s" begin="1.5s" repeatCount="indefinite"/>
   </rect>
 
   <rect x="92" y="203" width="382" height="4" rx="2" fill="url(#rule)">
@@ -173,7 +178,7 @@ def build_footer():
   </defs>
   <rect x="0" y="10" width="1200" height="1.4" fill="url(#fd)"/>
   <rect x="-260" y="9.4" width="260" height="2.6" rx="1.3" fill="url(#fs)">
-    <animate attributeName="x" values="-260;1200" dur="4.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+    <animate attributeName="x" values="-260;1200;1200" keyTimes="0;0.35;1" dur="8s" begin="5s" repeatCount="indefinite"/>
   </rect>
   <image x="578" y="22" width="44" height="44" href="data:image/png;base64,{mascot}" preserveAspectRatio="xMidYMid meet">
     <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="3.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>

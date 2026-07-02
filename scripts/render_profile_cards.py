@@ -32,6 +32,11 @@ def defs(idp, h, w=860):
   <radialGradient id="{idp}orb" cx="0.5" cy="0.5" r="0.5">
     <stop offset="0" stop-color="{ACC}" stop-opacity="0.20"/><stop offset="1" stop-color="{ACC}" stop-opacity="0"/>
   </radialGradient>
+  <linearGradient id="{idp}glint" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.09"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
   <filter id="{idp}soft" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="14"/></filter>
   <filter id="{idp}grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
     <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
@@ -40,15 +45,16 @@ def defs(idp, h, w=860):
   <clipPath id="{idp}round"><rect x="2" y="2" width="{w-4}" height="{h-4}" rx="20"/></clipPath>
 </defs>'''
 
-def tray(idp, h, w=860, orb='<circle cx="700" cy="40" r="130"/>'):
+def tray(idp, h, w=860, orb='<circle cx="700" cy="40" r="130"/>', sweep_begin=4.5, sweep_dur=11):
     orb_el = orb.replace('/>', f' fill="url(#{idp}orb)" filter="url(#{idp}soft)"/>')
+    gx_end = int(w + 0.33*h + 200)
     return f'''<g clip-path="url(#{idp}round)">
   <rect x="2" y="2" width="{w-4}" height="{h-4}" fill="url(#{idp}tray)"/>
   {orb_el}
   <rect x="2" y="2" width="{w-4}" height="{h-4}" fill="url(#{idp}glass)"/>
   <rect x="2" y="2" width="{w-4}" height="60" fill="url(#{idp}sheen)"/>
-  <rect x="-380" y="2" width="300" height="{h-4}" fill="#FFFFFF" opacity="0.04">
-    <animate attributeName="x" values="-380;860" dur="7.5s" begin="3.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+  <rect x="-300" y="-40" width="240" height="{h+80}" fill="url(#{idp}glint)" transform="skewX(-18)">
+    <animate attributeName="x" values="-300;{gx_end};{gx_end}" keyTimes="0;0.11;1" dur="{sweep_dur}s" begin="{sweep_begin}s" repeatCount="indefinite"/>
   </rect>
 </g>'''
 
@@ -129,7 +135,7 @@ def build_about():
     body+=enter(3, panel)
 
     svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 {H}" width="860" height="{H}" role="img" aria-label="自己紹介">'
-         + defs("ab",H) + tray("ab",H, orb='<circle cx="180" cy="60" r="150"/>')
+         + defs("ab",H) + tray("ab",H, orb='<circle cx="180" cy="60" r="150"/>', sweep_begin=4.5, sweep_dur=11)
          + header("ab","About Me","自己紹介","@miruky ・ he/him")
          + body + frame("ab",H) + '</svg>')
     with open(os.path.join(ASSETS,"about-card.svg"),"w",encoding="utf-8") as f: f.write(svg)
@@ -177,7 +183,7 @@ def build_stack():
           f'<animate attributeName="y" values="70;{H-20};70" dur="9s" begin="1.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" keyTimes="0;0.5;1"/></rect>')
 
     svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 {H}" width="860" height="{H}" role="img" aria-label="技術スタック">'
-         + defs("st",H) + tray("st",H, orb='<circle cx="720" cy="60" r="150"/>')
+         + defs("st",H) + tray("st",H, orb='<circle cx="720" cy="60" r="150"/>', sweep_begin=8, sweep_dur=11)
          + header("st","Tech Stack","技術スタック",f"{n_tools} TOOLS ・ {len(cats)} CATEGORIES")
          + scan + body + frame("st",H) + '</svg>')
     with open(os.path.join(ASSETS,"stack-card.svg"),"w",encoding="utf-8") as f: f.write(svg)
