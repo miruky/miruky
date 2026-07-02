@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 108" width="560" height="108" role="img" aria-label="Qiita 集計ツール">
+<defs>
+  <radialGradient id="ltt" cx="0.5" cy="0.2" r="1.0">
+    <stop offset="0" stop-color="#0E141C"/><stop offset="1" stop-color="#0A0E14"/>
+  </radialGradient>
+  <linearGradient id="ltg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#3AA0E0" stop-opacity="0.13"/><stop offset="1" stop-color="#3AA0E0" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="ltr" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#9AD1F5" stop-opacity="0.5"/><stop offset="0.5" stop-color="#3AA0E0" stop-opacity="0.18"/><stop offset="1" stop-color="#04121C" stop-opacity="0.10"/>
+  </linearGradient>
+  <linearGradient id="ltgl" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="lto" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#3AA0E0" stop-opacity="0.20"/><stop offset="1" stop-color="#3AA0E0" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="lts" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="ltd" x="-20%" y="-30%" width="140%" height="170%" color-interpolation-filters="sRGB">
+    <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#04121C" flood-opacity="0.45"/>
+  </filter>
+  <filter id="ltn" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.82  0 0 0 0 0.94  0 0 0 0.04 0"/>
+  </filter>
+  <clipPath id="ltc"><rect x="2" y="2" width="556" height="104" rx="17"/></clipPath>
+</defs>
+<g filter="url(#ltd)">
+  <g clip-path="url(#ltc)">
+    <rect x="2" y="2" width="556" height="104" fill="url(#ltt)"/>
+    <circle cx="120" cy="20" r="110" fill="url(#lto)" filter="url(#lts)"/>
+    <rect x="2" y="2" width="556" height="104" fill="url(#ltg)"/>
+    <rect x="2" y="2" width="556" height="40" fill="#FFFFFF" opacity="0.045"/>
+    
+    <rect x="-200" y="-20" width="150" height="148" fill="url(#ltgl)" transform="skewX(-18)">
+      <animate attributeName="x" values="-200;760;760" keyTimes="0;0.12;1" dur="11s" begin="10.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="2" y="2" width="556" height="104" fill="#000" opacity="0.5" filter="url(#ltn)"/>
+  </g>
+  <!-- icon box -->
+  <rect x="24" y="30" width="48" height="48" rx="13" fill="#3AA0E0" fill-opacity="0.12" stroke="#3AA0E0" stroke-opacity="0.32" stroke-width="1"/>
+  <g transform="translate(38,44)" fill="none" stroke="#9AD1F5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 V10"/><path d="M8 17 V6"/><path d="M13 17 V12"/><path d="M18 17 V3"/></g>
+  <!-- text -->
+  <text x="92" y="42" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9.5" letter-spacing="3" fill="#3AA0E0" opacity="0.9">TRACKER</text>
+  <text x="92" y="63" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="17" font-weight="700" fill="#E9F1FA">Qiita 集計ツール</text>
+  <text x="92" y="85" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="12" fill="#8A9BAB">自作のコントリビューション可視化ツール</text>
+  <!-- arrow（そっと誘うナッジ） -->
+  <g>
+    <circle cx="512" cy="54" r="17" fill="#3AA0E0" fill-opacity="0.10" stroke="#3AA0E0" stroke-opacity="0.35" stroke-width="1.2"/>
+    <g fill="none" stroke="#9AD1F5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M505 54 H518"/><path d="M513 48.5 L518.5 54 L513 59.5"/>
+    </g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;3 0;0 0" dur="2.6s" begin="3.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+  </g>
+  <rect x="2" y="2" width="556" height="104" rx="17" fill="none" stroke="url(#ltr)" stroke-width="1.3"/>
+</g>
+</svg>

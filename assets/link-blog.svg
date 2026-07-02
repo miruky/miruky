@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 108" width="560" height="108" role="img" aria-label="mirukyのIT備忘録">
+<defs>
+  <radialGradient id="lbt" cx="0.5" cy="0.2" r="1.0">
+    <stop offset="0" stop-color="#0E141C"/><stop offset="1" stop-color="#0A0E14"/>
+  </radialGradient>
+  <linearGradient id="lbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8A7DD8" stop-opacity="0.13"/><stop offset="1" stop-color="#8A7DD8" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="lbr" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#C9BEF5" stop-opacity="0.5"/><stop offset="0.5" stop-color="#8A7DD8" stop-opacity="0.18"/><stop offset="1" stop-color="#04121C" stop-opacity="0.10"/>
+  </linearGradient>
+  <linearGradient id="lbgl" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="lbo" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#8A7DD8" stop-opacity="0.20"/><stop offset="1" stop-color="#8A7DD8" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="lbs" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="12"/></filter>
+  <filter id="lbd" x="-20%" y="-30%" width="140%" height="170%" color-interpolation-filters="sRGB">
+    <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#04121C" flood-opacity="0.45"/>
+  </filter>
+  <filter id="lbn" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.82  0 0 0 0 0.94  0 0 0 0.04 0"/>
+  </filter>
+  <clipPath id="lbc"><rect x="2" y="2" width="556" height="104" rx="17"/></clipPath>
+</defs>
+<g filter="url(#lbd)">
+  <g clip-path="url(#lbc)">
+    <rect x="2" y="2" width="556" height="104" fill="url(#lbt)"/>
+    <circle cx="120" cy="20" r="110" fill="url(#lbo)" filter="url(#lbs)"/>
+    <rect x="2" y="2" width="556" height="104" fill="url(#lbg)"/>
+    <rect x="2" y="2" width="556" height="40" fill="#FFFFFF" opacity="0.045"/>
+    <circle cx="376" cy="26" r="1.0" fill="#DDE8FF" opacity="0.5"/><circle cx="432" cy="66" r="0.8" fill="#DDE8FF" opacity="0.35"/><circle cx="468" cy="22" r="1.1" fill="#DDE8FF" opacity="0.45"/><circle cx="492" cy="78" r="0.7" fill="#DDE8FF" opacity="0.3"/><circle cx="350" cy="80" r="0.8" fill="#DDE8FF" opacity="0.3"/><g transform="translate(452,42)"><path d="M0 -2.6 L0.6 -0.6 L2.6 0 L0.6 0.6 L0 2.6 L-0.6 0.6 L-2.6 0 L-0.6 -0.6 Z" fill="#C9BEF5" opacity="0.6"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.2s" begin="1.1s" repeatCount="indefinite"/></path></g>
+    <rect x="-200" y="-20" width="150" height="148" fill="url(#lbgl)" transform="skewX(-18)">
+      <animate attributeName="x" values="-200;760;760" keyTimes="0;0.12;1" dur="11s" begin="7.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="2" y="2" width="556" height="104" fill="#000" opacity="0.5" filter="url(#lbn)"/>
+  </g>
+  <!-- icon box -->
+  <rect x="24" y="30" width="48" height="48" rx="13" fill="#8A7DD8" fill-opacity="0.12" stroke="#8A7DD8" stroke-opacity="0.32" stroke-width="1"/>
+  <g transform="translate(38,44)" fill="none" stroke="#C9BEF5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="5.5"/><ellipse cx="10" cy="10" rx="9" ry="3.2" transform="rotate(-16 10 10)"/></g>
+  <!-- text -->
+  <text x="92" y="42" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="9.5" letter-spacing="3" fill="#8A7DD8" opacity="0.9">BLOG</text>
+  <text x="92" y="63" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="17" font-weight="700" fill="#E9F1FA">mirukyのIT備忘録</text>
+  <text x="92" y="85" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="12" fill="#8A9BAB">ポートフォリオ・技術ブログ ・ 宇宙の片隅から</text>
+  <!-- arrow（そっと誘うナッジ） -->
+  <g>
+    <circle cx="512" cy="54" r="17" fill="#8A7DD8" fill-opacity="0.10" stroke="#8A7DD8" stroke-opacity="0.35" stroke-width="1.2"/>
+    <g fill="none" stroke="#C9BEF5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M505 54 H518"/><path d="M513 48.5 L518.5 54 L513 59.5"/>
+    </g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;3 0;0 0" dur="2.6s" begin="2.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+  </g>
+  <rect x="2" y="2" width="556" height="104" rx="17" fill="none" stroke="url(#lbr)" stroke-width="1.3"/>
+</g>
+</svg>

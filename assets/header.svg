@@ -13,10 +13,13 @@
       <stop offset="0" stop-color="#3AA0E0" stop-opacity="0.10"/><stop offset="1" stop-color="#3AA0E0" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="aurV" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#8A7DD8" stop-opacity="0.10"/><stop offset="1" stop-color="#8A7DD8" stop-opacity="0"/>
+      <stop offset="0" stop-color="#8A7DD8" stop-opacity="0.26"/><stop offset="0.6" stop-color="#8A7DD8" stop-opacity="0.12"/><stop offset="1" stop-color="#8A7DD8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurV2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.16"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="vglow" cx="0.32" cy="1.0" r="0.75">
-      <stop offset="0" stop-color="#8A7DD8" stop-opacity="0.09"/><stop offset="1" stop-color="#8A7DD8" stop-opacity="0"/>
+      <stop offset="0" stop-color="#8A7DD8" stop-opacity="0.16"/><stop offset="1" stop-color="#8A7DD8" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="shoot" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/>
@@ -53,8 +56,11 @@
   <ellipse cx="640" cy="215" rx="300" ry="100" fill="url(#aurB)" filter="url(#asoft)">
     <animateTransform attributeName="transform" type="translate" values="0 0;-70 -12;0 0" dur="21s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
   </ellipse>
-  <ellipse cx="920" cy="70" rx="240" ry="85" fill="url(#aurV)" filter="url(#asoft)">
+  <ellipse cx="920" cy="70" rx="320" ry="105" fill="url(#aurV)" filter="url(#asoft)">
     <animateTransform attributeName="transform" type="translate" values="0 0;-40 16;0 0" dur="24s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+  </ellipse>
+  <ellipse cx="560" cy="120" rx="230" ry="62" fill="url(#aurV2)" filter="url(#asoft)" transform="rotate(-9 560 120)">
+    <animateTransform attributeName="transform" type="translate" values="0 0;55 -12;0 0" additive="sum" dur="19s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
   </ellipse>
   <rect width="1200" height="300" fill="url(#glow)"/>
   <rect width="1200" height="300" fill="url(#vglow)"/>
