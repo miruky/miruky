@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1200&color=5CD1F0&center=true&vCenter=true&width=560&height=40&lines=AWS+Cloud+Engineer;Qiita+Writer+%2F+80%2B+Articles;AWS+All+Certifications;Infrastructure+as+Code+%2F+Serverless+%2F+GenAI" alt="roles" />
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/roles.svg" width="560" alt="roles" />
 
 <p>
   <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white" alt="Qiita" /></a>
@@ -31,6 +31,8 @@
 <div align="center">
 
 <a href="https://qiita.com/miruky"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/qiita-card.svg" width="96%" alt="Qiita stats" /></a>
+
+<a href="https://qiita.com/miruky"><img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/articles-card.svg" width="96%" alt="最新の記事" /></a>
 
 </div>
 
@@ -89,6 +91,4 @@
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/divider.svg" width="100%" alt="" />
-
-<div align="center"><sub>AWS Cloud Engineer based in Tokyo</sub></div>
+<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/footer.svg" width="100%" alt="" />

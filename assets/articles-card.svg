@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 236" width="860" height="236" role="img" aria-label="最新の記事">
+<defs>
+  <radialGradient id="atray" cx="0.5" cy="0.25" r="0.95">
+    <stop offset="0" stop-color="#0E1511"/><stop offset="1" stop-color="#0A0F0B"/>
+  </radialGradient>
+  <linearGradient id="aglass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#55C500" stop-opacity="0.10"/><stop offset="1" stop-color="#55C500" stop-opacity="0.03"/>
+  </linearGradient>
+  <linearGradient id="arim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#D8FFC2" stop-opacity="0.45"/><stop offset="0.5" stop-color="#55C500" stop-opacity="0.16"/><stop offset="1" stop-color="#0C2400" stop-opacity="0.10"/>
+  </linearGradient>
+  <radialGradient id="aorb" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#55C500" stop-opacity="0.22"/><stop offset="1" stop-color="#55C500" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="asoft2" x="-60%" y="-60%" width="220%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="14"/></filter>
+  <filter id="agrain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.77  0 0 0 0 0.10  0 0 0 0.05 0"/>
+  </filter>
+  <clipPath id="around"><rect x="2" y="2" width="856" height="232" rx="20"/></clipPath>
+</defs>
+
+<g clip-path="url(#around)">
+  <rect x="2" y="2" width="856" height="232" fill="url(#atray)"/>
+  <circle cx="700" cy="40" r="130" fill="url(#aorb)" filter="url(#asoft2)"/>
+  <rect x="2" y="2" width="856" height="232" fill="url(#aglass)"/>
+  <rect x="-380" y="2" width="300" height="232" fill="#FFFFFF" opacity="0.04">
+    <animate attributeName="x" values="-380;860" dur="7s" begin="2.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+  </rect>
+</g>
+
+<circle cx="38" cy="42" r="5" fill="#55C500">
+  <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+</circle>
+<text x="54" y="48" font-family="'Segoe UI',-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic','Noto Sans JP',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#C2F0C2">Latest Articles</text>
+<text x="208" y="48" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="13" letter-spacing="2" fill="#71D083">最新の記事</text>
+<text x="822" y="47" text-anchor="end" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="12" fill="#8FBF8A">qiita.com/miruky</text>
+<line x1="40" y1="64" x2="820" y2="64" stroke="#55C500" stroke-opacity="0.16" stroke-width="1"/>
+
+<g opacity="1"><animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.20s" fill="freeze"/><text x="44" y="96" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="13" fill="#7FE04A">01</text><text x="80" y="96" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="15" fill="#C2F0C2">【読書の夏？】各分野のおすすめ技術書を75冊まとめてみた</text><g transform="translate(724,85)"><path d="M6 11 C1 7 1 3 3.5 3 C5 3 6 4.5 6 4.5 C6 4.5 7 3 8.5 3 C11 3 11 7 6 11 Z" fill="#71D083"/></g><text x="740" y="96" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="12" fill="#71D083">56</text><text x="816" y="96" text-anchor="end" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="11" fill="#8FBF8A">06/29</text></g><line x1="44" y1="114" x2="816" y2="114" stroke="#55C500" stroke-opacity="0.09" stroke-width="1"/><g opacity="1"><animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.38s" fill="freeze"/><text x="44" y="146" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="13" fill="#7FE04A">02</text><text x="80" y="146" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="15" fill="#C2F0C2">【AWS Codeシリーズ】CI／CDの基礎から本番運用まで一気に整理し…</text><g transform="translate(724,135)"><path d="M6 11 C1 7 1 3 3.5 3 C5 3 6 4.5 6 4.5 C6 4.5 7 3 8.5 3 C11 3 11 7 6 11 Z" fill="#71D083"/></g><text x="740" y="146" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="12" fill="#71D083">6</text><text x="816" y="146" text-anchor="end" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="11" fill="#8FBF8A">06/27</text></g><line x1="44" y1="164" x2="816" y2="164" stroke="#55C500" stroke-opacity="0.09" stroke-width="1"/><g opacity="1"><animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.56s" fill="freeze"/><text x="44" y="196" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="13" fill="#7FE04A">03</text><text x="80" y="196" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif" font-size="15" fill="#C2F0C2">ReactとかNext.jsとか、あたかも言語みたいな顔でこちらを見てく…</text><g transform="translate(724,185)"><path d="M6 11 C1 7 1 3 3.5 3 C5 3 6 4.5 6 4.5 C6 4.5 7 3 8.5 3 C11 3 11 7 6 11 Z" fill="#71D083"/></g><text x="740" y="196" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="12" fill="#71D083">432</text><text x="816" y="196" text-anchor="end" font-family="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace" font-size="11" fill="#8FBF8A">06/16</text></g>
+
+<rect x="2" y="2" width="856" height="232" rx="20" fill="none" stroke="url(#arim)" stroke-width="1.4"/>
+<rect x="2" y="2" width="856" height="232" rx="20" fill="#000" opacity="0.5" filter="url(#agrain)" clip-path="url(#around)"/>
+</svg>

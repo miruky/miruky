@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - "scripts/render_qiita_card.py"
+      - "scripts/render_articles_card.py"
       - ".github/workflows/qiita-card.yml"
 
 jobs:
@@ -27,14 +28,17 @@ jobs:
       - name: Render Qiita card
         run: python scripts/render_qiita_card.py
 
+      - name: Render latest articles card
+        run: python scripts/render_articles_card.py
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- assets/qiita-card.svg; then
-            git add assets/qiita-card.svg
-            git commit -m "chore: update Qiita stats card [skip ci]"
+          if ! git diff --quiet -- assets/qiita-card.svg assets/articles-card.svg; then
+            git add assets/qiita-card.svg assets/articles-card.svg
+            git commit -m "chore: update Qiita stats & articles cards [skip ci]"
             git push
           else
-            echo "no change in card"
+            echo "no change in cards"
           fi
