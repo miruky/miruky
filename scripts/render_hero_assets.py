@@ -9,6 +9,7 @@ ASSETS = os.path.join(ROOT, "assets")
 
 BG="#0D1117"; TEXT="#E6EDF3"; MUTED="#7D8590"
 ACCENT="#5CD1F0"; ACCENT2="#A8ECFF"; DEEP="#3AA0E0"
+VIO="#8A7DD8"; VIO_LT="#C9BEF5"; STAR="#DDE8FF"
 SANS="'Segoe UI',-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic','Noto Sans JP','Meiryo',Helvetica,Arial,sans-serif"
 MONO="ui-monospace,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace"
 JP="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Meiryo',sans-serif"
@@ -43,6 +44,21 @@ def build_header():
                     f'<animate attributeName="cy" values="272;46" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
                     f'<animate attributeName="opacity" values="0;0.4;0" keyTimes="0;0.35;1" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/></circle>')
 
+    # 宇宙要素: 小さな星々（静的）＋非同期きらめき＋たまの流れ星
+    star_pts=[(140,26,0.35,0.9),(300,18,0.25,0.7),(470,34,0.4,1.0),(560,52,0.3,0.8),(650,24,0.45,1.1),
+              (700,58,0.25,0.7),(745,36,0.35,0.9),(905,26,0.3,0.8),(1005,20,0.4,1.0),(1170,40,0.35,0.9),
+              (620,140,0.22,0.7),(730,150,0.2,0.8)]
+    stars="".join(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{STAR}" opacity="{op}"/>' for x,y,op,r in star_pts)
+    for x,y,c,dur,beg in [(520,30,ACCENT2,4.2,0.5),(830,48,"#FFFFFF",5.1,1.3),(1178,64,VIO_LT,3.6,2.1)]:
+        stars+=(f'<g transform="translate({x},{y})">'
+                f'<path d="M0 -3 L0.7 -0.7 L3 0 L0.7 0.7 L0 3 L-0.7 0.7 L-3 0 L-0.7 -0.7 Z" fill="{c}" opacity="0.5">'
+                f'<animate attributeName="opacity" values="0.2;1;0.4;0.2" keyTimes="0;0.2;0.5;1" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
+                f'</path></g>')
+    stars+=(f'<line x1="628" y1="16" x2="668" y2="32" stroke="url(#shoot)" stroke-width="1.2" stroke-linecap="round" opacity="0">'
+            f'<animate attributeName="opacity" values="0;0;0.9;0" keyTimes="0;0.02;0.06;0.12" dur="14s" begin="6s" repeatCount="indefinite"/>'
+            f'<animateTransform attributeName="transform" type="translate" values="-30 -12;70 28;70 28" keyTimes="0;0.12;1" dur="14s" begin="6s" repeatCount="indefinite"/>'
+            f'</line>')
+
     # コーヒーの湯気（マスコットのカップ上）
     steam=""
     for (sx,sy,dur,beg) in [(1036,188,3.8,0.4),(1047,182,4.4,1.5),(1057,189,5.0,2.6)]:
@@ -66,8 +82,17 @@ def build_header():
     <radialGradient id="aurB" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0" stop-color="{DEEP}" stop-opacity="0.10"/><stop offset="1" stop-color="{DEEP}" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="aurV" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="{VIO}" stop-opacity="0.10"/><stop offset="1" stop-color="{VIO}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vglow" cx="0.32" cy="1.0" r="0.75">
+      <stop offset="0" stop-color="{VIO}" stop-opacity="0.09"/><stop offset="1" stop-color="{VIO}" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shoot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/>
+    </linearGradient>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="{ACCENT2}"/>
+      <stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="{VIO_LT}"/>
     </linearGradient>
     <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
@@ -98,9 +123,14 @@ def build_header():
   <ellipse cx="640" cy="215" rx="300" ry="100" fill="url(#aurB)" filter="url(#asoft)">
     <animateTransform attributeName="transform" type="translate" values="0 0;-70 -12;0 0" dur="21s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
   </ellipse>
+  <ellipse cx="920" cy="70" rx="240" ry="85" fill="url(#aurV)" filter="url(#asoft)">
+    <animateTransform attributeName="transform" type="translate" values="0 0;-40 16;0 0" dur="24s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+  </ellipse>
   <rect width="1200" height="300" fill="url(#glow)"/>
+  <rect width="1200" height="300" fill="url(#vglow)"/>
   <rect width="1200" height="300" fill="#000" opacity="0.7" filter="url(#hgrain)"/>
 
+  {stars}
   {particles}
   <g>{bars}</g>
 
@@ -189,5 +219,59 @@ def build_footer():
     with open(os.path.join(ASSETS,"footer.svg"),"w",encoding="utf-8") as f: f.write(svg)
     print("footer.svg", os.path.getsize(os.path.join(ASSETS,"footer.svg")), "B")
 
+# ============================================================ SECTIONS（ランナー型見出し）
+# 「浮いた箱」をやめ、ゴースト番号 + タイトル + 右へ溶けていく罫線 + 端の小星座で構成する。
+SECTIONS=[("01","自己紹介","section-about.svg"),("02","Qiita","section-qiita.svg"),
+          ("03","保有資格","section-certifications.svg"),("04","技術スタック","section-stack.svg"),
+          ("05","GitHub","section-github.svg"),("06","リンク","section-links.svg")]
+
+def build_sections():
+    for i,(num,title,fname) in enumerate(SECTIONS):
+        title_w = sum(30 if ord(c)>0x2E7F else 17 for c in title)
+        lx = 92 + title_w + 26          # 罫線の開始位置
+        lw = 1160 - lx                  # 罫線の長さ
+        gb = 2.5 + i*1.8                # glint の時差発火
+        svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 76" width="1200" height="76" role="img" aria-label="{title}">
+  <defs>
+    <linearGradient id="sline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="{ACCENT}" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="{VIO}" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="{VIO}" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sglint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="{ACCENT2}" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="{ACCENT2}" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="{ACCENT2}" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="sclip"><rect x="{lx}" y="41" width="{lw}" height="6"/></clipPath>
+  </defs>
+  <text x="24" y="58" font-family="{MONO}" font-size="50" font-weight="700" letter-spacing="2" fill="{ACCENT}" opacity="0.17">{num}</text>
+  <text x="92" y="52" font-family="{JP}" font-size="26" font-weight="700" letter-spacing="4" fill="{TEXT}">{title}</text>
+  <rect x="{lx}" y="43" width="{lw}" height="1.3" fill="url(#sline)">
+    <animate attributeName="width" values="0;{lw}" dur="0.9s" begin="0.15s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1"/>
+  </rect>
+  <g clip-path="url(#sclip)">
+    <rect x="{lx-140}" y="42.4" width="140" height="2.6" fill="url(#sglint)">
+      <animate attributeName="x" values="{lx-140};1180;1180" keyTimes="0;0.14;1" dur="12s" begin="{gb}s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate({lx-14},43.5)">
+    <path d="M0 -4 L0.9 -0.9 L4 0 L0.9 0.9 L0 4 L-0.9 0.9 L-4 0 L-0.9 -0.9 Z" fill="{ACCENT2}" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3.4s" begin="{0.4+i*0.5:.1f}s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g opacity="0.65">
+    <line x1="1120" y1="30" x2="1148" y2="44" stroke="{STAR}" stroke-opacity="0.25" stroke-width="0.7"/>
+    <line x1="1148" y1="44" x2="1170" y2="26" stroke="{STAR}" stroke-opacity="0.25" stroke-width="0.7"/>
+    <circle cx="1120" cy="30" r="1.2" fill="{STAR}" opacity="0.5"/>
+    <circle cx="1148" cy="44" r="1.6" fill="{ACCENT2}" opacity="0.7">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="{3.2+i*0.4:.1f}s" begin="{i*0.7:.1f}s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1170" cy="26" r="1.1" fill="{VIO_LT}" opacity="0.55"/>
+  </g>
+</svg>'''
+        with open(os.path.join(ASSETS,fname),"w",encoding="utf-8") as f: f.write(svg)
+    print("sections:", len(SECTIONS), "runner headers")
+
 if __name__=="__main__":
-    build_header(); build_roles(); build_footer()
+    build_header(); build_roles(); build_footer(); build_sections()

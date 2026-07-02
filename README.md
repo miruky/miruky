@@ -16,7 +16,7 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-about.svg" alt="About" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-about.svg" alt="About" />
 
 <div align="center">
 
@@ -24,7 +24,7 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-qiita.svg" alt="Qiita" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-qiita.svg" alt="Qiita" />
 
 <div align="center">
 
@@ -34,7 +34,7 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-certifications.svg" alt="Certifications" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-certifications.svg" alt="Certifications" />
 
 <div align="center">
 
@@ -44,7 +44,7 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-stack.svg" alt="Tech Stack" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-stack.svg" alt="Tech Stack" />
 
 <div align="center">
 
@@ -54,7 +54,7 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-github.svg" alt="GitHub" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-github.svg" alt="GitHub" />
 
 <div align="center">
 
@@ -70,7 +70,7 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-links.svg" alt="Links" />
+<img width="100%" src="https://raw.githubusercontent.com/miruky/miruky/main/assets/section-links.svg" alt="Links" />
 
 - **[Qiita](https://qiita.com/miruky)** &#8212; AWS・AI・セキュリティ の技術記事（全 10 シリーズ連載）
 - **[サンプルコード](https://github.com/miruky/qiita)** &#8212; 連載記事のサンプルコード集
