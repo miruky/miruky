@@ -101,7 +101,7 @@ def build_about():
     rows=[
         ("業務","WORK",I_CLOUD,"AWS を用いたクラウドインフラの設計・構築 〜 運用・保守"),
         ("発信","WRITING",I_PEN,"Qiita で AWS・AI・セキュリティを中心に技術記事を連載"),
-        ("関心","FOCUS",I_SPARK,"Terraform × Amazon Bedrock による生成 AI 基盤づくり"),
+        ("関心","FOCUS",I_SPARK,"CloudFormation と AWS Code シリーズを使った CI/CD パイプライン構築"),
     ]
     body=""
     for i,(jp,en,ic,desc) in enumerate(rows):
