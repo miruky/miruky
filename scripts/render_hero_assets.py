@@ -2,7 +2,7 @@
 """ヒーロー（assets/header.svg）・ロールカルーセル（assets/roles.svg）・フッター（assets/footer.svg）を生成する。
 方針: 全て自作 SVG / camo 安全（SMIL のみ、CSS アニメ・foreignObject 不可）。
 静的レンダラでも破綻しないよう、アニメ対象は「基準値=完成形」にして values で 0 から動かす。"""
-import os, base64
+import os, re, base64
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, "assets")
@@ -21,6 +21,9 @@ def b64(name):
 # ============================================================ HEADER
 def build_header():
     mascot = b64("mascot-lg.png")
+    # ブログ・カプセル（既存アセット）をキャンバスに埋め込む（外側の svg タグだけ剥がす）
+    with open(os.path.join(ASSETS, "blog-badge.svg"), encoding="utf-8") as f:
+        badge_inner = re.sub(r'^<svg[^>]*>', '', f.read(), count=1).rsplit('</svg>', 1)[0]
 
     # イコライザーバー（マスコット左・呼吸＋一部は高さパルス）
     heights=[46,84,60,112,72,132,92,56,104,66]
@@ -54,7 +57,7 @@ def build_header():
                 f'<path d="M0 -3 L0.7 -0.7 L3 0 L0.7 0.7 L0 3 L-0.7 0.7 L-3 0 L-0.7 -0.7 Z" fill="{c}" opacity="0.5">'
                 f'<animate attributeName="opacity" values="0.2;1;0.4;0.2" keyTimes="0;0.2;0.5;1" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
                 f'</path></g>')
-    stars+=(f'<line x1="628" y1="16" x2="668" y2="32" stroke="url(#shoot)" stroke-width="1.2" stroke-linecap="round" opacity="0">'
+    stars+=(f'<line x1="628" y1="16" x2="668" y2="32" stroke="url(#hshoot)" stroke-width="1.2" stroke-linecap="round" opacity="0">'
             f'<animate attributeName="opacity" values="0;0;0.9;0" keyTimes="0;0.02;0.06;0.12" dur="14s" begin="6s" repeatCount="indefinite"/>'
             f'<animateTransform attributeName="transform" type="translate" values="-30 -12;70 28;70 28" keyTimes="0;0.12;1" dur="14s" begin="6s" repeatCount="indefinite"/>'
             f'</line>')
@@ -68,7 +71,40 @@ def build_header():
                 f'<animateTransform attributeName="transform" type="translate" values="0 0;0 -16" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
                 f'</path></g>')
 
-    svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="miruky - AWS Cloud Engineer">
+    # ===== 下段（キャンバス y300-476）: ロール / ソーシャルピル / ブログカプセル =====
+    lines=["AWS Cloud Engineer","Qiita Writer / 80+ Articles","AWS All Certifications","IaC / Serverless / GenAI"]
+    per=4.0; total=per*len(lines)
+    roles_txt=""
+    for i,s in enumerate(lines):
+        base=1 if i==0 else 0
+        roles_txt+=(f'<text x="356" y="332" font-family="{MONO}" font-size="17" letter-spacing="1" fill="#B6C9D6" opacity="{base}">{s}'
+                    f'<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.22;0.26;1" dur="{total}s" begin="{i*per}s" repeatCount="indefinite"/></text>')
+    lower=(f'<text x="330" y="332" font-family="{MONO}" font-size="17" fill="{ACCENT}">&gt;</text>'
+           f'<rect x="344" y="317" width="3" height="18" fill="{ACCENT}">'
+           f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></rect>'
+           + roles_txt)
+    # ソーシャルピル（リンクは README 側で 左右50%の <a> により付与）
+    lower+=(f'<g transform="translate(430,358)">'
+            f'<rect width="150" height="36" rx="18" fill="#55C500" fill-opacity="0.13" stroke="#55C500" stroke-opacity="0.4" stroke-width="1.1"/>'
+            f'<rect x="1.5" y="1.5" width="147" height="14" rx="12" fill="#FFFFFF" opacity="0.06"/>'
+            f'<circle cx="24" cy="18" r="4.2" fill="#55C500"><animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite"/></circle>'
+            f'<text x="40" y="24" font-family="{SANS}" font-size="15" font-weight="700" fill="#C2F0C2">Qiita</text>'
+            f'<g fill="none" stroke="#9FE86B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(114,12)">'
+            f'<path d="M0 12 L11 1"/><path d="M4 1 H11 V8"/></g></g>')
+    lower+=(f'<g transform="translate(620,358)">'
+            f'<rect width="190" height="36" rx="18" fill="{ACCENT}" fill-opacity="0.10" stroke="{ACCENT}" stroke-opacity="0.35" stroke-width="1.1"/>'
+            f'<rect x="1.5" y="1.5" width="187" height="14" rx="12" fill="#FFFFFF" opacity="0.06"/>'
+            f'<g stroke="#D5E9F2" stroke-width="2" stroke-linecap="round" transform="translate(20,12)">'
+            f'<path d="M0 0 L11 12"/><path d="M11 0 L0 12"/></g>'
+            f'<text x="42" y="23" font-family="{MONO}" font-size="12.5" fill="#D5E9F2">@miruky_tech</text></g>')
+    # ブログ・カプセル（既存アセットをそのまま埋め込み・中央配置）
+    lower+=f'<g transform="translate(455,398) scale(0.85)">{badge_inner}</g>'
+    # 下段の星（背景の連続感）
+    for x,y,op,r in [(200,330,0.3,0.8),(1000,326,0.35,0.9),(150,432,0.3,0.8),(1056,442,0.35,1.0),
+                     (90,382,0.25,0.7),(1130,392,0.3,0.8),(320,452,0.22,0.7),(880,455,0.25,0.8)]:
+        lower+=f'<circle cx="{x}" cy="{y}" r="{r}" fill="{STAR}" opacity="{op}"/>'
+
+    content=f'''
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="{BG}"/><stop offset="1" stop-color="#0A0D12"/>
@@ -91,7 +127,7 @@ def build_header():
     <radialGradient id="vglow" cx="0.32" cy="1.0" r="0.75">
       <stop offset="0" stop-color="{VIO}" stop-opacity="0.16"/><stop offset="1" stop-color="{VIO}" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="shoot" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="hshoot" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/>
     </linearGradient>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
@@ -102,7 +138,7 @@ def build_header():
       <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="mglow" cx="0.5" cy="0.46" r="0.5">
+    <radialGradient id="hmglow" cx="0.5" cy="0.46" r="0.5">
       <stop offset="0" stop-color="{ACCENT}" stop-opacity="0.28"/><stop offset="0.6" stop-color="{ACCENT}" stop-opacity="0.08"/><stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/>
     </radialGradient>
     <filter id="msoft" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="16"/></filter>
@@ -118,7 +154,7 @@ def build_header():
     </clipPath>
   </defs>
 
-  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="476" fill="url(#bg)"/>
   <!-- aurora drift -->
   <ellipse cx="300" cy="80" rx="270" ry="95" fill="url(#aurA)" filter="url(#asoft)">
     <animateTransform attributeName="transform" type="translate" values="0 0;60 14;0 0" dur="16s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
@@ -133,8 +169,8 @@ def build_header():
     <animateTransform attributeName="transform" type="translate" values="0 0;55 -12;0 0" additive="sum" dur="19s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
   </ellipse>
   <rect width="1200" height="300" fill="url(#glow)"/>
-  <rect width="1200" height="300" fill="url(#vglow)"/>
-  <rect width="1200" height="300" fill="#000" opacity="0.7" filter="url(#hgrain)"/>
+  <rect width="1200" height="476" fill="url(#vglow)"/>
+  <rect width="1200" height="476" fill="#000" opacity="0.7" filter="url(#hgrain)"/>
 
   {stars}
   {particles}
@@ -146,8 +182,8 @@ def build_header():
   <!-- wordmark -->
   <text x="86" y="184" font-family="{SANS}" font-size="94" font-weight="800" letter-spacing="1" fill="#F0F6FC">miruky</text>
   <!-- diagonal glint（柔らかいグラデ帯が素早く通過 → 静止） -->
-  <rect x="-340" y="-40" width="240" height="380" fill="url(#glint)" transform="skewX(-18)">
-    <animate attributeName="x" values="-340;1560;1560" keyTimes="0;0.11;1" dur="12s" begin="1.5s" repeatCount="indefinite"/>
+  <rect x="-340" y="-40" width="240" height="560" fill="url(#glint)" transform="skewX(-18)">
+    <animate attributeName="x" values="-340;1720;1720" keyTimes="0;0.11;1" dur="12s" begin="1.5s" repeatCount="indefinite"/>
   </rect>
 
   <rect x="92" y="203" width="382" height="4" rx="2" fill="url(#rule)">
@@ -171,15 +207,25 @@ def build_header():
     <circle cx="1058" cy="160" r="96" fill="none" stroke="{ACCENT}" stroke-opacity="0.16" stroke-width="1.2" stroke-dasharray="2 9">
       <animateTransform attributeName="transform" type="rotate" from="0 1058 160" to="360 1058 160" dur="70s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="1058" cy="160" r="98" fill="url(#mglow)" filter="url(#msoft)"/>
+    <circle cx="1058" cy="160" r="98" fill="url(#hmglow)" filter="url(#msoft)"/>
     <image x="972" y="74" width="172" height="172" href="data:image/png;base64,{mascot}" preserveAspectRatio="xMidYMid meet">
       <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="4.4s" begin="0s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
     </image>
     {steam}
   </g>
-</svg>'''
-    with open(os.path.join(ASSETS,"header.svg"),"w",encoding="utf-8") as f: f.write(svg)
-    print("header.svg", os.path.getsize(os.path.join(ASSETS,"header.svg")), "B")
+
+  <!-- ===== 下段: 同一キャンバスから帯として切り出す ===== -->
+  {lower}
+'''
+    # 1枚のキャンバス(1200x476)を viewBox で帯に切り出す（背景が帯間で完全に連続する）
+    strips=[("header.svg",0,0,1200,300),("strip-roles.svg",0,300,1200,52),
+            ("strip-social-l.svg",0,352,600,46),("strip-social-r.svg",600,352,600,46),
+            ("strip-blog.svg",0,398,1200,78)]
+    for fn,vx,vy,vw,vh in strips:
+        svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vx} {vy} {vw} {vh}" '
+             f'width="{vw}" height="{vh}" role="img" aria-label="miruky">'+content+'</svg>')
+        with open(os.path.join(ASSETS,fn),"w",encoding="utf-8") as f: f.write(svg)
+        print(fn, os.path.getsize(os.path.join(ASSETS,fn)), "B")
 
 # ============================================================ ROLES (typing-svg の置き換え)
 def build_roles():
