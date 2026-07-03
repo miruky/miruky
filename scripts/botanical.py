@@ -146,16 +146,16 @@ def botanical(idp, variant):
     lo = _LAYOUT[variant]; h = 400 if variant == "qiita" else 236
     cx, cy = lo["cx"], lo["cy"]
     sizes = [16, 13, 11, 9] if variant == "qiita" else [13, 11, 9, 8]
-    s_op, l_op = 0.16, 0.18
+    s_op, l_op = 0.11, 0.12
     K_frame = 8; K_inner = 4
 
     defs = (f'<linearGradient id="{idp}leaf" x1="0" y1="0" x2="0.2" y2="1">'
             f'<stop offset="0" stop-color="#9CEC63"/><stop offset="0.55" stop-color="#5FA83A"/>'
             f'<stop offset="1" stop-color="#356E1F"/></linearGradient>'
             f'<radialGradient id="{idp}fg" cx="0.5" cy="0.5" r="0.5">'
-            f'<stop offset="0" stop-color="#55C500" stop-opacity="0.22"/><stop offset="1" stop-color="#55C500" stop-opacity="0"/></radialGradient>'
+            f'<stop offset="0" stop-color="#55C500" stop-opacity="0.15"/><stop offset="1" stop-color="#55C500" stop-opacity="0"/></radialGradient>'
             f'<radialGradient id="{idp}fg2" cx="0.5" cy="0.5" r="0.5">'
-            f'<stop offset="0" stop-color="#8FE04D" stop-opacity="0.16"/><stop offset="1" stop-color="#8FE04D" stop-opacity="0"/></radialGradient>'
+            f'<stop offset="0" stop-color="#8FE04D" stop-opacity="0.11"/><stop offset="1" stop-color="#8FE04D" stop-opacity="0"/></radialGradient>'
             f'<filter id="{idp}fs" x="-70%" y="-70%" width="240%" height="240%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="26"/></filter>'
             f'<filter id="{idp}dapple" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">'
             f'<feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="11" stitchTiles="stitch" result="n"/>'
@@ -163,7 +163,7 @@ def botanical(idp, variant):
 
     layer = (f'<circle cx="70" cy="{h-40}" r="150" fill="url(#{idp}fg)" filter="url(#{idp}fs)"/>'
              f'<circle cx="800" cy="30" r="140" fill="url(#{idp}fg2)" filter="url(#{idp}fs)"/>'
-             f'<rect x="2" y="2" width="856" height="{h-4}" filter="url(#{idp}dapple)" opacity="0.5"/>')
+             f'<rect x="2" y="2" width="856" height="{h-4}" filter="url(#{idp}dapple)" opacity="0.32"/>')
     # 額縁ツタ（くねくね）
     for k, (ax, a0, a1, base, amp, wv) in enumerate(lo["frame"]):
         W = _wave(ax, a0, a1, base, amp, wv, phase=0.4*k)
@@ -173,11 +173,11 @@ def botanical(idp, variant):
         layer += _vine(W, f"{idp}leaf", s_op*0.9, l_op*0.92, sizes, K_inner, 0.9+k*0.3, 20+k, cx, cy)
     # 木々
     for i, (x, by, th) in enumerate(lo["trees"]):
-        layer += _tree(x, by, th, f"{idp}leaf", 0.12, i)
+        layer += _tree(x, by, th, f"{idp}leaf", 0.08, i)
     # 舞う胞子
     for i, (x, dur, beg, r) in enumerate(_SPORES[variant]):
         layer += (f'<circle cx="{x}" cy="{h//2}" r="{r}" fill="{SPORE}" opacity="0">'
                   f'<animate attributeName="cy" values="{h+12};-12" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
-                  f'<animate attributeName="opacity" values="0;0.42;0.42;0" keyTimes="0;0.16;0.7;1" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
+                  f'<animate attributeName="opacity" values="0;0.30;0.30;0" keyTimes="0;0.16;0.7;1" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/>'
                   f'<animate attributeName="cx" values="{x};{x+8};{x-6};{x}" dur="{dur}s" begin="{beg}s" repeatCount="indefinite"/></circle>')
     return defs, layer

@@ -38,9 +38,12 @@ def arc(cx,cy,r,a0,a1):
     sweep=1 if a1>a0 else 0
     return f"M{x0:.2f} {y0:.2f} A{r} {r} 0 {large} {sweep} {x1:.2f} {y1:.2f}"
 
+TILE_BASE="#0A140C"  # ブロックのダーク基盤（背後のツタを抑えて数値を読みやすく）
+
 def glass_tile(x,y,w,h,rx,grad):
-    # 半透明ガラス面 + 上辺リムライト + 影
+    # ダーク基盤 → 半透明ガラス面 → 上辺リムライト + 影
     return (f'<g filter="url(#drop)">'
+            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{TILE_BASE}" fill-opacity="0.62"/>'
             f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="url(#{grad})"/>'
             f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="none" stroke="url(#rim)" stroke-width="1.2"/>'
             f'<rect x="{x+1}" y="{y+1}" width="{w-2}" height="{h*0.4:.0f}" rx="{rx-2}" fill="url(#sheen)"/>'
