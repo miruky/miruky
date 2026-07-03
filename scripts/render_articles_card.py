@@ -3,6 +3,8 @@
 Qiita API v2 /users/miruky/items から最新3件を取得して assets/articles-card.svg を描画。
 GitHub Actions から毎日実行。取得失敗時は既存ファイルを保持したまま正常終了する。"""
 import json, os, sys, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from botanical import botanical
 
 API = "https://qiita.com/api/v2/users/miruky/items?page=1&per_page=3"
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "articles-card.svg")
@@ -53,6 +55,7 @@ def build(items):
         if i<2:
             rows+=f'<line x1="44" y1="{y+18}" x2="816" y2="{y+18}" stroke="{ACC}" stroke-opacity="0.09" stroke-width="1"/>'
 
+    bot_defs, bot_layer = botanical("rb", "articles")
     svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 236" width="860" height="236" role="img" aria-label="最新の記事">
 <defs>
   <radialGradient id="atray" cx="0.5" cy="0.25" r="0.95">
@@ -78,11 +81,14 @@ def build(items):
     <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.77  0 0 0 0 0.10  0 0 0 0.05 0"/>
   </filter>
   <clipPath id="around"><rect x="2" y="2" width="856" height="232" rx="20"/></clipPath>
+  {bot_defs}
 </defs>
 
 <g clip-path="url(#around)">
   <rect x="2" y="2" width="856" height="232" fill="url(#atray)"/>
   <circle cx="700" cy="40" r="130" fill="url(#aorb)" filter="url(#asoft2)"/>
+  <!-- ボタニカル: ツタ・葉・巻きひげ・胞子 -->
+  {bot_layer}
   <rect x="2" y="2" width="856" height="232" fill="url(#aglass)"/>
   <rect x="-300" y="-40" width="240" height="320" fill="url(#aglint)" transform="skewX(-18)">
     <animate attributeName="x" values="-300;1100;1100" keyTimes="0;0.11;1" dur="10s" begin="6s" repeatCount="indefinite"/>

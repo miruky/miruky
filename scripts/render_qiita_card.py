@@ -4,7 +4,9 @@
 設計: 株価折れ線を廃し、閲覧数を主役の 270 度ゲージ + 4種の異なる非チャート微グラフ。
 制約: committed SVG / camo安全（SMIL + feTurbulence + feGaussianBlur, no CSS/backdrop-filter）。
 ※ フォロワーは掲載しない。数値はカンマ区切りの full 桁（省略しない）。"""
-import json, os, math, urllib.request
+import json, os, sys, math, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from botanical import botanical
 
 HIST = "https://raw.githubusercontent.com/miruky/qiita-contibution-count/main/data/history.json"
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "qiita-card.svg")
@@ -101,6 +103,7 @@ def build(data):
                 f'<text x="{dw:.0f}" y="14" font-family="{JP}" font-size="9.5" fill="{MINT2}">{jp_txt}</text>'
                 f'</g>')
 
+    bot_defs, bot_layer = botanical("qb", "qiita")
     svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="Qiita 活動記録">
 <defs>
   <radialGradient id="tray" cx="0.5" cy="0.28" r="0.9">
@@ -149,6 +152,7 @@ def build(data):
     <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.77  0 0 0 0 0.10  0 0 0 0.05 0"/>
   </filter>
   <clipPath id="round"><rect x="2" y="2" width="856" height="396" rx="22"/></clipPath>
+  {bot_defs}
 </defs>
 
 <g clip-path="url(#round)">
@@ -156,6 +160,8 @@ def build(data):
   <!-- light-leak orbs behind hero -->
   <circle cx="150" cy="170" r="140" fill="url(#orb)" filter="url(#soft)"/>
   <circle cx="300" cy="300" r="110" fill="url(#orb)" filter="url(#soft)" opacity="0.7"/>
+  <!-- ボタニカル: ツタ・葉・巻きひげ・胞子（ガラス越しに透ける） -->
+  {bot_layer}
   <!-- diagonal glint（素早く通過 → 静止） -->
   <rect x="-300" y="-40" width="240" height="480" fill="url(#qglint)" transform="skewX(-18)">
     <animate attributeName="x" values="-300;1160;1160" keyTimes="0;0.11;1" dur="10s" begin="3s" repeatCount="indefinite"/>
