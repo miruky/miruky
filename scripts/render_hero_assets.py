@@ -2,7 +2,7 @@
 """ヒーロー（assets/header.svg）・ロールカルーセル（roles.svg）・フッター（footer.svg）・セクション見出しを生成。
 方針: 全て自作 SVG / camo 安全（SMIL のみ）。ワードマークは Futura Bold の字形パス（wordmark.py）。
 登場シーケンス（begin=0 + keyTimes 保持→移動）で静的レンダラでも破綻しない（基準値=完成形）。"""
-import os, re, base64, random, sys
+import os, re, base64, random, math, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from wordmark import LETTERS, WORDMARK_X0, WORDMARK_BASE, WORDMARK_W
 
@@ -43,6 +43,25 @@ def _starc(x, y, r, o, tw=False, dur=4.0, beg=0.0):
                        f'keyTimes="0;0.2;0.5;1" dur="{dur:.1f}s" begin="{beg:.1f}s" repeatCount="indefinite"/></circle>')
     return base + '/>'
 
+def _cluster(seed, cx, cy, spread, n):
+    # 星団: 中心に淡いグロー + ガウス分布で密集した小星群
+    rnd = random.Random(seed)
+    out = f'<circle cx="{cx}" cy="{cy}" r="{spread*2.3:.0f}" fill="url(#clglow)" filter="url(#asoft)"/>'
+    for i in range(n):
+        a = rnd.uniform(0, 6.283); rr = abs(rnd.gauss(0, spread*0.55))
+        x = cx + rr*math.cos(a); y = cy + rr*math.sin(a)*0.68
+        out += _starc(x, y, rnd.uniform(0.4, 1.15), rnd.uniform(0.25, 0.72),
+                      tw=(i % 5 == 0), dur=3+(i % 3)*0.7, beg=(i % 4)*0.6)
+    return out
+
+def _flare(x, y, size, col, beg=1.0):
+    # 光条星（回折スパイク付きの明るい星）
+    return (f'<g transform="translate({x},{y})">'
+            f'<path d="M0 {-size} L0 {size} M{-size} 0 L{size} 0 M{-size*0.5:.1f} {-size*0.5:.1f} L{size*0.5:.1f} {size*0.5:.1f} M{-size*0.5:.1f} {size*0.5:.1f} L{size*0.5:.1f} {-size*0.5:.1f}" '
+            f'stroke="{col}" stroke-width="0.6" stroke-linecap="round" opacity="0.4"/>'
+            f'<circle r="1.7" fill="{col}" filter="url(#nodeglow)"/>'
+            f'<animate attributeName="opacity" values="0.55;1;0.55" dur="4.5s" begin="{beg}s" repeatCount="indefinite"/></g>')
+
 # ============================================================ HEADER
 def build_header():
     mascot = b64("mascot-lg.png")
@@ -65,6 +84,10 @@ def build_header():
     far_layer = f'<g filter="url(#sblur)">{_drift(far_svg, 5, 3, 46)}</g>'
     mid_layer = _drift(mid_svg, -9, 4, 31)
     near_layer = _drift(near_svg + spk, 13, -6, 22)
+
+    # --- 星団（クラスター）＋ 光条星 ---
+    clusters = _cluster(41, 716, 50, 26, 22) + _cluster(42, 322, 250, 30, 26) + _cluster(43, 604, 234, 22, 15)
+    flares = _flare(876, 112, 7, ACCENT2, 1.0) + _flare(506, 74, 6, VIO_LT, 2.4) + _flare(690, 210, 5, ACCENT2, 3.1)
 
     shoot = ('<line x1="628" y1="16" x2="668" y2="32" stroke="url(#hshoot)" stroke-width="1.2" stroke-linecap="round" opacity="0">'
              '<animate attributeName="opacity" values="0;0;0.9;0" keyTimes="0;0.02;0.06;0.12" dur="15s" begin="7s" repeatCount="indefinite"/>'
@@ -140,7 +163,11 @@ def build_header():
     <radialGradient id="planet" cx="0.36" cy="0.3" r="0.8"><stop offset="0" stop-color="#8B93D8"/><stop offset="0.6" stop-color="#3A3F7A"/><stop offset="1" stop-color="#171B3E"/></radialGradient>
     <linearGradient id="hshoot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/></linearGradient>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="{VIO_LT}"/></linearGradient>
-    <linearGradient id="wmgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCEEFF"/></linearGradient>
+    <linearGradient id="wmgrad" x1="0" y1="0" x2="0.85" y2="1"><stop offset="0" stop-color="#F2F7FF"/><stop offset="0.42" stop-color="#A9D3FF"/><stop offset="0.74" stop-color="#BFB4F3"/><stop offset="1" stop-color="#AE97E8"/></linearGradient>
+    <radialGradient id="clglow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#A6BEFF" stop-opacity="0.16"/><stop offset="1" stop-color="#A6BEFF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="pillglass" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#3E4E72" stop-opacity="0.34"/><stop offset="0.5" stop-color="#1A2236" stop-opacity="0.40"/><stop offset="1" stop-color="#0E1320" stop-opacity="0.52"/></linearGradient>
+    <linearGradient id="pillrim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{ACCENT2}" stop-opacity="0.5"/><stop offset="0.5" stop-color="{ACCENT}" stop-opacity="0.22"/><stop offset="1" stop-color="{VIO}" stop-opacity="0.42"/></linearGradient>
+    <clipPath id="pillclip"><rect width="524" height="32" rx="16"/></clipPath>
     <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.08"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
     <radialGradient id="hmglow" cx="0.5" cy="0.46" r="0.5"><stop offset="0" stop-color="{ACCENT}" stop-opacity="0.28"/><stop offset="0.6" stop-color="{ACCENT}" stop-opacity="0.08"/><stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/></radialGradient>
     <filter id="msoft" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="16"/></filter>
@@ -162,9 +189,11 @@ def build_header():
 
   {far_layer}
   {mid_layer}
+  {clusters}
   {planet}
   {constellation}
   {near_layer}
+  {flares}
   {shoot}
 
   <rect width="1200" height="300" fill="url(#vig)"/>
@@ -181,10 +210,12 @@ def build_header():
   <g><g>{_rise(0.42, 12)}<text x="94" y="244" font-family="{JP}" font-size="22" letter-spacing="1" fill="{MUTED}">クラウドエンジニア <tspan fill="#30363D">/</tspan> Qiita ライター</text></g></g>
 
   <g transform="translate(92,258)"><g>{_rise(0.52, 10)}
-    <rect width="524" height="32" rx="16" fill="#12161D" fill-opacity="0.85" stroke="{ACCENT}" stroke-opacity="0.28"/>
-    <rect x="1" y="1" width="522" height="14" rx="13" fill="#FFFFFF" opacity="0.05"/>
-    <circle cx="18" cy="16" r="4" fill="{ACCENT}"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/><animate attributeName="r" values="4;5.2;4" dur="2s" repeatCount="indefinite"/></circle>
-    <text x="34" y="21" font-family="{JP}" font-size="13" fill="#9FB6C8">いま構築中 : CloudFormation × AWS Code シリーズの CI/CD パイプライン</text>
+    <rect width="524" height="32" rx="16" fill="url(#pillglass)"/>
+    <g clip-path="url(#pillclip)"><rect x="-150" y="-6" width="95" height="44" fill="#FFFFFF" opacity="0.05" transform="skewX(-18)"><animate attributeName="x" values="-150;640;640" keyTimes="0;0.13;1" dur="9s" begin="2.2s" repeatCount="indefinite"/></rect></g>
+    <rect x="1.5" y="1.5" width="521" height="13" rx="12" fill="#FFFFFF" opacity="0.06"/>
+    <rect width="524" height="32" rx="16" fill="none" stroke="url(#pillrim)" stroke-width="1"/>
+    <circle cx="19" cy="16" r="3.6" fill="{ACCENT2}" filter="url(#nodeglow)"><animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/><animate attributeName="r" values="3.4;4.7;3.4" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="36" y="21" font-family="{JP}" font-size="13" fill="#CDDBE8">いま構築中 <tspan fill="{ACCENT2}" font-family="{MONO}">:</tspan> CloudFormation × AWS Code シリーズの CI/CD パイプライン</text>
   </g></g>
 
   {mascot_scene}
