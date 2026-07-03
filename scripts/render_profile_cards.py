@@ -2,10 +2,33 @@
 """自己紹介カード（assets/about-card.svg）と技術スタックカード（assets/stack-card.svg）を生成する。
 素の Markdown テーブルを、他カードと同じ「水色グラス素材」の自作 SVG に置き換えるためのもの。
 制約: camo 安全（SMIL のみ）。静的レンダラでも破綻しないよう基準値=完成形。"""
-import os
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from stack_icons import STACK_ICONS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(ROOT, "assets")
+
+# 技術スタックカード背景に、AWSサービス公式アイコンを透明度高めで散布する
+_SCATTER = [
+    ("AWS",770,110,66,-10,0.065),("Lambda",624,112,40,12,0.06),("DynamoDB",726,300,50,-8,0.06),
+    ("S3",506,142,36,14,0.055),("EC2",822,206,46,-14,0.06),("RDS",560,300,40,10,0.055),
+    ("SQS",470,196,34,-10,0.05),("CloudWatch",644,196,38,16,0.055),("Bedrock",762,250,44,-6,0.06),
+    ("SageMaker",690,150,34,-16,0.05),("CodePipeline",504,388,40,8,0.055),("CodeBuild",624,388,36,-12,0.05),
+    ("ECS",830,338,44,18,0.06),("Connect",300,392,38,-10,0.05),("CloudFormation",150,396,34,12,0.048),
+    ("SAM",402,340,32,-8,0.05),("Comprehend",832,58,30,10,0.05),("Lex",560,244,30,-14,0.05),
+    ("CDK",720,390,34,6,0.05),("CodeDeploy",250,300,30,-12,0.045),
+]
+
+def stack_scatter(color, clip):
+    out = ""
+    for name, cx, cy, size, rot, op in _SCATTER:
+        vb, inner = STACK_ICONS[name]
+        s = size/vb
+        op = min(0.10, op*1.45)
+        out += (f'<g transform="translate({cx},{cy}) rotate({rot}) scale({s:.3f}) translate({-vb/2:.1f},{-vb/2:.1f})" '
+                f'fill="{color}" opacity="{op:.3f}">{inner.replace("white", color)}</g>')
+    return f'<g clip-path="url(#{clip})">{out}</g>'
 
 # ---- palette: water-blue glass（システム色） ----
 BASE_C="#0D141C"; BASE_E="#0A0E14"
@@ -278,6 +301,7 @@ def build_stack():
 
     svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 {H}" width="860" height="{H}" role="img" aria-label="技術スタック">'
          + defs("st",H) + tray("st",H, orb='<circle cx="720" cy="60" r="150"/>', sweep_begin=8, sweep_dur=11)
+         + stack_scatter(ACC, "stround")
          + header("st","Tech Stack","技術スタック",f"{n_tools} TOOLS ・ {len(cats)} CATEGORIES")
          + scan + body + frame("st",H) + '</svg>')
     with open(os.path.join(ASSETS,"stack-card.svg"),"w",encoding="utf-8") as f: f.write(svg)
