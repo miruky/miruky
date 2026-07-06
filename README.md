@@ -8,7 +8,6 @@
 
 <p>
   <a href="https://qiita.com/miruky"><img src="https://img.shields.io/badge/Qiita-55C500?style=flat-square&logo=qiita&logoColor=white" alt="Qiita" /></a>
-  <a href="https://x.com/miruky_tech"><img src="https://img.shields.io/badge/@miruky__tech-1A1E24?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
   <img src="https://komarev.com/ghpvc/?username=miruky&label=views&color=30363D&style=flat-square" alt="views" />
 </p>
 
