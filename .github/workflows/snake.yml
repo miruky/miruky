@@ -35,3 +35,9 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Purge jsDelivr cache
+        # jsDelivr はブランチ参照を最大12hキャッシュするため、更新したスネークを即時反映させる
+        run: |
+          curl -fsS "https://purge.jsdelivr.net/gh/miruky/miruky@output/github-contribution-grid-snake.svg" || true
+          curl -fsS "https://purge.jsdelivr.net/gh/miruky/miruky@output/github-contribution-grid-snake-dark.svg" || true

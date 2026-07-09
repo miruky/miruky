@@ -48,3 +48,9 @@ jobs:
           else
             echo "no change in cards"
           fi
+
+      - name: Purge jsDelivr cache
+        # jsDelivr はブランチ参照を最大12hキャッシュするため、更新した日次カードを即時反映させる
+        run: |
+          curl -fsS "https://purge.jsdelivr.net/gh/miruky/miruky@main/assets/qiita-card.svg" || true
+          curl -fsS "https://purge.jsdelivr.net/gh/miruky/miruky@main/assets/articles-card.svg" || true
