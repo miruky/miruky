@@ -27,9 +27,9 @@
 
 <div align="center">
 
-<a href="https://qiita.com/miruky"><img src="https://cdn.jsdelivr.net/gh/miruky/miruky@main/assets/qiita-card.svg?d=20260904" width="96%" alt="Qiita stats" /></a>
+<a href="https://qiita.com/miruky"><img src="https://cdn.jsdelivr.net/gh/miruky/miruky@main/assets/qiita-card.svg?d=20260905" width="96%" alt="Qiita stats" /></a>
 
-<a href="https://qiita.com/miruky"><img src="https://cdn.jsdelivr.net/gh/miruky/miruky@main/assets/articles-card.svg?d=20260904" width="96%" alt="最新の記事" /></a>
+<a href="https://qiita.com/miruky"><img src="https://cdn.jsdelivr.net/gh/miruky/miruky@main/assets/articles-card.svg?d=20260905" width="96%" alt="最新の記事" /></a>
 
 </div>
 
